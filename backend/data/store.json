@@ -1,0 +1,1957 @@
+{
+  "memories": [
+    {
+      "id": "mrlr9zzcfq1z",
+      "text": "my name is Varshith",
+      "tag": "Note",
+      "created_at": "2026-07-15T07:25:39.048Z"
+    },
+    {
+      "id": "mrnwhomb0y19",
+      "text": "Varshith's username or handle is Varshith_tillu.",
+      "tag": "Learned",
+      "created_at": "2026-07-16T19:27:08.003Z"
+    },
+    {
+      "id": "mrt6bns3q4xr",
+      "text": "Varshith asked it.",
+      "tag": "Learned",
+      "created_at": "2026-07-20T12:01:14.019Z"
+    },
+    {
+      "id": "mrt6ffd5vi89",
+      "text": "Varshith is my name.",
+      "tag": "Learned",
+      "created_at": "2026-07-20T12:04:09.737Z"
+    },
+    {
+      "id": "mrt6q785u7jt",
+      "text": "Varshith studies at Malla Reddy University.",
+      "tag": "Learned",
+      "created_at": "2026-07-20T12:12:32.405Z"
+    },
+    {
+      "id": "mrt6qgrmk3p5",
+      "text": "Varshith studies B.tech data science at Malla Reddy University.",
+      "tag": "Learned",
+      "created_at": "2026-07-20T12:12:44.770Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msa5mdjjwl9w",
+      "role": "user",
+      "content": "i was going on a movie on 7th august add to callender",
+      "created_at": "2026-08-01T09:13:39.343Z"
+    },
+    {
+      "id": "msa5me1nr2zs",
+      "role": "assistant",
+      "content": "I'll add that to your calendar, Varshith. \n\nTo confirm, you want me to create an event on your calendar for a movie on August 7th, right? What time were you planning to go for the movie? And would you like me to add any other details, like the movie name or location? \n\nAlso, would you like to set any reminders for this event? \n\n(I'll make sure to add it to your calendar as soon as I get the necessary details)",
+      "created_at": "2026-08-01T09:13:39.995Z"
+    },
+    {
+      "id": "msa5my3rrmcx",
+      "role": "user",
+      "content": "what mails do i got today",
+      "created_at": "2026-08-01T09:14:05.991Z"
+    },
+    {
+      "id": "msa5n0plstec",
+      "role": "assistant",
+      "content": "You have the following emails in your inbox:\n\n1. From \"You Know, for Search\" - \"Registration pending approval for Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Comm.\"\n2. From \"Masters' Union\" - \"Starting in a Few Hours | Your Roadmap to be an AI Product Manager\"\n3. From StudyIN Hyderabad - \"Register for AI Master Class by Jared Auclair at ITC Kohenur Hyderabad (8th August)\"\n4. From UNiDAYS - \"PALADUGU VARSHITH, it’s Surprise Saturday!\"\n5. From Tagarampudi Issaku via LinkedIn - \"Tagarampudi just messaged you\"\n\nThese are the emails I found in your inbox. Let me know if you need any further assistance!",
+      "created_at": "2026-08-01T09:14:09.369Z",
+      "attachments": [
+        {
+          "type": "email",
+          "title": "Registration pending approval for Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Comm.",
+          "subtitle": "\"You Know, for Search\" <you-know-for-search@calendar.luma-mail.com>",
+          "url": "https://mail.google.com/mail/u/0/#inbox/19fbc6ea5a633bb6"
+        },
+        {
+          "type": "email",
+          "title": "Starting in a Few Hours | Your Roadmap to be an AI Product Manager",
+          "subtitle": "\"Masters' Union\" <pgadmissions@mastersunion.org>",
+          "url": "https://mail.google.com/mail/u/0/#inbox/19fbc5bb998fe152"
+        },
+        {
+          "type": "email",
+          "title": "Register for AI Master Class by Jared Auclair at ITC Kohenur Hyderabad (8th August)",
+          "subtitle": "StudyIN Hyderabad <hyderabadstudyin@gmail.com>",
+          "url": "https://mail.google.com/mail/u/0/#inbox/19fbc375c57ea922"
+        },
+        {
+          "type": "email",
+          "title": "PALADUGU VARSHITH, it’s Surprise Saturday!",
+          "subtitle": "UNiDAYS <hello@info.myunidays.com>",
+          "url": "https://mail.google.com/mail/u/0/#inbox/19fbc22d853ac843"
+        },
+        {
+          "type": "email",
+          "title": "Tagarampudi just messaged you",
+          "subtitle": "Tagarampudi Issaku via LinkedIn <messaging-digest-noreply@linkedin.com>",
+          "url": "https://mail.google.com/mail/u/0/#inbox/19fbc1863366dac7"
+        }
+      ]
+    },
+    {
+      "id": "msa5ndcdd892",
+      "role": "user",
+      "content": "what are the events on my calender this month ",
+      "created_at": "2026-08-01T09:14:25.741Z"
+    },
+    {
+      "id": "msa5ne051noq",
+      "role": "assistant",
+      "content": "According to your calendar, you have one upcoming event this month:\n\n1. Birthday — 2026-08-08\n\nAdditionally, you had mentioned earlier that you were planning to go for a movie on August 7th, but I didn't receive any further details to officially add it to your calendar. If you'd like to confirm the details, I can add it to your calendar.",
+      "created_at": "2026-08-01T09:14:26.597Z",
+      "attachments": [
+        {
+          "type": "event",
+          "title": "Birthday",
+          "subtitle": "2026-08-08",
+          "url": "https://www.google.com/calendar/event?eid=Y2NxMzRvaG9jNWo2NmJiMTZvczNhYjlrY2NyNjZiYjE2OWgzMGJiNGNwajNhZDlsNnRpMzBwOWs2a18yMDI2MDgwOCB2YXJzaGl0aC5jb2RlQG0"
+        }
+      ]
+    },
+    {
+      "id": "msa5nxk5enof",
+      "role": "user",
+      "content": "add a event on 5th august i wasd going to movie on my google callender",
+      "created_at": "2026-08-01T09:14:51.941Z"
+    },
+    {
+      "id": "msa5ou7of9od",
+      "role": "assistant",
+      "content": "I can add these to your calendar:\n\n• Movie — 2026-08-05 (all day)",
+      "created_at": "2026-08-01T09:15:34.260Z",
+      "action": {
+        "type": "calendar.create",
+        "events": [
+          {
+            "title": "Movie",
+            "date": "2026-08-05",
+            "start": null,
+            "durationHours": 0
+          }
+        ],
+        "connected": true,
+        "label": "Add 1 event",
+        "done": true,
+        "doneLabel": "Added 1 event"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "mrn5emg4oeza",
+      "title": "research the top 5 opensouce best llm models capable of planning and coding",
+      "status": "todo",
+      "priority": "Medium",
+      "category": "General",
+      "created_at": "2026-07-16T06:48:55.588Z"
+    },
+    {
+      "id": "msa5qrxyrnpx",
+      "title": "Morning Routine",
+      "status": "todo",
+      "priority": "Medium",
+      "category": "Workflow",
+      "created_at": "2026-08-01T09:17:04.630Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "msa5qry11o4p",
+      "title": "Task created",
+      "detail": "Morning Routine",
+      "tone": "",
+      "created_at": "2026-08-01T09:17:04.633Z"
+    },
+    {
+      "id": "msa5ou7njx9x",
+      "title": "Added calendar events",
+      "detail": "Movie",
+      "tone": "success",
+      "created_at": "2026-08-01T09:15:34.259Z"
+    },
+    {
+      "id": "msa4nosgnnpe",
+      "title": "Added calendar events",
+      "detail": "ITC KOHINOOR",
+      "tone": "success",
+      "created_at": "2026-08-01T08:46:40.960Z"
+    },
+    {
+      "id": "ms49r3x3mpcr",
+      "title": "Task completed",
+      "detail": "i was going to park evening are you interested to come",
+      "tone": "success",
+      "created_at": "2026-07-28T06:22:41.559Z"
+    },
+    {
+      "id": "ms49r377ky39",
+      "title": "Working on task",
+      "detail": "i was going to park evening are you interested to come",
+      "tone": "",
+      "created_at": "2026-07-28T06:22:40.627Z"
+    },
+    {
+      "id": "ms49r375x0bm",
+      "title": "Background task queued (via IG DM)",
+      "detail": "i was going to park evening are you interested to come",
+      "tone": "info",
+      "created_at": "2026-07-28T06:22:40.625Z"
+    },
+    {
+      "id": "ms49odrjuljp",
+      "title": "Sent an email",
+      "detail": "To varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-28T06:20:34.351Z"
+    },
+    {
+      "id": "ms30gtjcw7o5",
+      "title": "Posted to LinkedIn",
+      "detail": "In the current month, I don't have any specific scheduled ev",
+      "tone": "success",
+      "created_at": "2026-07-27T09:14:58.824Z"
+    },
+    {
+      "id": "ms30e4iazq5v",
+      "title": "Posted to LinkedIn",
+      "detail": "I've noted down your instructions. Here's a draft email to s",
+      "tone": "success",
+      "created_at": "2026-07-27T09:12:53.074Z"
+    },
+    {
+      "id": "ms30apylk81u",
+      "title": "Posted to LinkedIn",
+      "detail": "It seems there might have been a typo in your email address.",
+      "tone": "success",
+      "created_at": "2026-07-27T09:10:14.253Z"
+    },
+    {
+      "id": "ms3081xguify",
+      "title": "Posted to LinkedIn",
+      "detail": "I understand you're looking for creative content ideas. How ",
+      "tone": "success",
+      "created_at": "2026-07-27T09:08:09.796Z"
+    },
+    {
+      "id": "ms305o2ksvyd",
+      "title": "Task completed",
+      "detail": "i need a leave on 30th aas i was going to spiderman movie se",
+      "tone": "success",
+      "created_at": "2026-07-27T09:06:18.524Z"
+    },
+    {
+      "id": "ms305o2ink75",
+      "title": "Sent email(s)",
+      "detail": "1 to varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-27T09:06:18.522Z"
+    },
+    {
+      "id": "ms305n4fumbe",
+      "title": "Working on task",
+      "detail": "i need a leave on 30th aas i was going to spiderman movie se",
+      "tone": "",
+      "created_at": "2026-07-27T09:06:17.295Z"
+    },
+    {
+      "id": "ms305n4dukko",
+      "title": "Background task queued",
+      "detail": "i need a leave on 30th aas i was going to spiderman movie se",
+      "tone": "info",
+      "created_at": "2026-07-27T09:06:17.293Z"
+    },
+    {
+      "id": "ms304o4zsin5",
+      "title": "Task completed",
+      "detail": "i need a leave on 30th as I was going to spider man movie se",
+      "tone": "success",
+      "created_at": "2026-07-27T09:05:31.955Z"
+    },
+    {
+      "id": "ms304o4wdrpq",
+      "title": "Sent email(s)",
+      "detail": "1 to varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-27T09:05:31.952Z"
+    },
+    {
+      "id": "ms304n07ooah",
+      "title": "Working on task",
+      "detail": "i need a leave on 30th as I was going to spider man movie se",
+      "tone": "",
+      "created_at": "2026-07-27T09:05:30.487Z"
+    },
+    {
+      "id": "ms304n06eamn",
+      "title": "Background task queued (via IG DM)",
+      "detail": "i need a leave on 30th as I was going to spider man movie se",
+      "tone": "info",
+      "created_at": "2026-07-27T09:05:30.486Z"
+    },
+    {
+      "id": "ms2rl9uu2tut",
+      "title": "Task completed",
+      "detail": "make a leave letter for akhileruva1@gmail.com  that I was go",
+      "tone": "success",
+      "created_at": "2026-07-27T05:06:30.054Z"
+    },
+    {
+      "id": "ms2rl99m51h1",
+      "title": "Working on task",
+      "detail": "make a leave letter for akhileruva1@gmail.com  that I was go",
+      "tone": "",
+      "created_at": "2026-07-27T05:06:29.290Z"
+    },
+    {
+      "id": "ms2rl99kpl2t",
+      "title": "Background task queued",
+      "detail": "make a leave letter for akhileruva1@gmail.com  that I was go",
+      "tone": "info",
+      "created_at": "2026-07-27T05:06:29.288Z"
+    },
+    {
+      "id": "ms2rjze62bj7",
+      "title": "Task completed",
+      "detail": "make a leave letter for akhil that I was got on. move today",
+      "tone": "success",
+      "created_at": "2026-07-27T05:05:29.838Z"
+    },
+    {
+      "id": "ms2rjydvxzpu",
+      "title": "Working on task",
+      "detail": "make a leave letter for akhil that I was got on. move today",
+      "tone": "",
+      "created_at": "2026-07-27T05:05:28.531Z"
+    },
+    {
+      "id": "ms2rjyduy84v",
+      "title": "Background task queued",
+      "detail": "make a leave letter for akhil that I was got on. move today",
+      "tone": "info",
+      "created_at": "2026-07-27T05:05:28.530Z"
+    },
+    {
+      "id": "mrudxuxj7r8f",
+      "title": "Task completed",
+      "detail": "i need a leave on 24th and 25th as i was going to hackaton o",
+      "tone": "success",
+      "created_at": "2026-07-21T08:22:13.207Z"
+    },
+    {
+      "id": "mrudxuxhck6r",
+      "title": "Sent email(s)",
+      "detail": "1 to varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-21T08:22:13.205Z"
+    },
+    {
+      "id": "mrudxt36p4qa",
+      "title": "Working on task",
+      "detail": "i need a leave on 24th and 25th as i was going to hackaton o",
+      "tone": "",
+      "created_at": "2026-07-21T08:22:10.818Z"
+    },
+    {
+      "id": "mrudxt34oo6g",
+      "title": "Background task queued (via IG DM)",
+      "detail": "i need a leave on 24th and 25th as i was going to hackaton o",
+      "tone": "info",
+      "created_at": "2026-07-21T08:22:10.816Z"
+    },
+    {
+      "id": "mrt6qgrnas5h",
+      "title": "Learned a new fact",
+      "detail": "Varshith studies B.tech data science at Malla Reddy University.",
+      "tone": "info",
+      "created_at": "2026-07-20T12:12:44.771Z"
+    },
+    {
+      "id": "mrt6q7875fkw",
+      "title": "Learned a new fact",
+      "detail": "Varshith studies at Malla Reddy University.",
+      "tone": "info",
+      "created_at": "2026-07-20T12:12:32.407Z"
+    },
+    {
+      "id": "mrt6ffd6y5jj",
+      "title": "Learned a new fact",
+      "detail": "Varshith is my name.",
+      "tone": "info",
+      "created_at": "2026-07-20T12:04:09.738Z"
+    },
+    {
+      "id": "mrt6bns4628a",
+      "title": "Learned a new fact",
+      "detail": "Varshith asked it.",
+      "tone": "info",
+      "created_at": "2026-07-20T12:01:14.020Z"
+    },
+    {
+      "id": "mrt5ua7jz3cr",
+      "title": "Persona updated",
+      "detail": "Atlas",
+      "tone": "info",
+      "created_at": "2026-07-20T11:47:43.279Z"
+    },
+    {
+      "id": "mrt5ss6ouxd7",
+      "title": "Persona updated",
+      "detail": "Atlas",
+      "tone": "info",
+      "created_at": "2026-07-20T11:46:33.264Z"
+    },
+    {
+      "id": "mrt5o4kz1iyk",
+      "title": "Persona updated",
+      "detail": "Atlas",
+      "tone": "info",
+      "created_at": "2026-07-20T11:42:56.051Z"
+    },
+    {
+      "id": "mrt5nuj4jl78",
+      "title": "Persona updated",
+      "detail": "Atlas",
+      "tone": "info",
+      "created_at": "2026-07-20T11:42:43.024Z"
+    },
+    {
+      "id": "mrt5lr2vuii9",
+      "title": "Task completed",
+      "detail": "send a leave letter to tillu I  need a leave on 24th and 25t",
+      "tone": "success",
+      "created_at": "2026-07-20T11:41:05.239Z"
+    },
+    {
+      "id": "mrt5lr2sa5zx",
+      "title": "Sent email(s)",
+      "detail": "1 to varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-20T11:41:05.236Z"
+    },
+    {
+      "id": "mrt5lpscmt4j",
+      "title": "Working on task",
+      "detail": "send a leave letter to tillu I  need a leave on 24th and 25t",
+      "tone": "",
+      "created_at": "2026-07-20T11:41:03.564Z"
+    },
+    {
+      "id": "mrt5lpsarecg",
+      "title": "Background task queued (via IG DM)",
+      "detail": "send a leave letter to tillu I  need a leave on 24th and 25t",
+      "tone": "info",
+      "created_at": "2026-07-20T11:41:03.562Z"
+    },
+    {
+      "id": "mrt3uc7s8187",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:51:46.648Z"
+    },
+    {
+      "id": "mrt3rm2k51nq",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:49:39.452Z"
+    },
+    {
+      "id": "mrt3riaehbgt",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:49:34.550Z"
+    },
+    {
+      "id": "mrt32211j65l",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:29:47.077Z"
+    },
+    {
+      "id": "mrt311shbujg",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:29:00.113Z"
+    },
+    {
+      "id": "mrt30uo4gfsc",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:28:50.884Z"
+    },
+    {
+      "id": "mrt3063depw9",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:28:19.033Z"
+    },
+    {
+      "id": "mrt2zcjv489j",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:27:40.747Z"
+    },
+    {
+      "id": "mrt2yx4t63rf",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:27:20.765Z"
+    },
+    {
+      "id": "mrt2yssv3k6d",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:27:15.151Z"
+    },
+    {
+      "id": "mrt2yemudnvv",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:26:56.790Z"
+    },
+    {
+      "id": "mrt2xt75a1br",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:26:29.009Z"
+    },
+    {
+      "id": "mrt2x5g9wgrg",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:25:58.233Z"
+    },
+    {
+      "id": "mrt2wf3v0b1y",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:25:24.091Z"
+    },
+    {
+      "id": "mrt2vmvwub0q",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:24:47.516Z"
+    },
+    {
+      "id": "mrt2vmu80qf1",
+      "title": "Agent settings updated",
+      "detail": "",
+      "tone": "info",
+      "created_at": "2026-07-20T10:24:47.456Z"
+    },
+    {
+      "id": "mrt2uo9g94d4",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:24:02.644Z"
+    },
+    {
+      "id": "mrt2ufv2s2pu",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T10:23:51.758Z"
+    },
+    {
+      "id": "mrt2ilhrlo48",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T10:14:39.183Z"
+    },
+    {
+      "id": "mrt1w8rql365",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T09:57:16.262Z"
+    },
+    {
+      "id": "mrt1ptl6t89c",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T09:52:16.650Z"
+    },
+    {
+      "id": "mrsxri989vqt",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T08:01:36.812Z"
+    },
+    {
+      "id": "mrsxqb82p78j",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T08:00:41.042Z"
+    },
+    {
+      "id": "mrsxjvyjqh3i",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:55:41.323Z"
+    },
+    {
+      "id": "mrsxearz5mn0",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:51:20.591Z"
+    },
+    {
+      "id": "mrsxdga6bcia",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:50:41.070Z"
+    },
+    {
+      "id": "mrsx82oz2159",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:46:30.179Z"
+    },
+    {
+      "id": "mrsx70q0uje4",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:45:40.968Z"
+    },
+    {
+      "id": "mrsx1qhy74jf",
+      "title": "Idle work done",
+      "detail": "Learned from web: **Show HN: I replaced a $120k bowling center syste",
+      "tone": "info",
+      "created_at": "2026-07-20T07:41:34.438Z"
+    },
+    {
+      "id": "mrsx0tgyftbm",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:40:51.634Z"
+    },
+    {
+      "id": "mrsx0l2alsuw",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:40:40.738Z"
+    },
+    {
+      "id": "mrswvir54xfb",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:36:44.465Z"
+    },
+    {
+      "id": "mrswu5n98ngm",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:35:40.821Z"
+    },
+    {
+      "id": "mrswlv41sq22",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:29:13.921Z"
+    },
+    {
+      "id": "mrswlv30te94",
+      "title": "Posted to LinkedIn (via IG DM)",
+      "detail": "In the vibrant world of Web3, the future is decent",
+      "tone": "success",
+      "created_at": "2026-07-20T07:29:13.884Z"
+    },
+    {
+      "id": "mrswkin8bi6z",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:28:11.108Z"
+    },
+    {
+      "id": "mrswhb0j70y8",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:25:41.251Z"
+    },
+    {
+      "id": "mrswbps1s6id",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:21:20.449Z"
+    },
+    {
+      "id": "mrswavadp1kp",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:20:40.933Z"
+    },
+    {
+      "id": "mrsw5iyo0x9b",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:16:31.680Z"
+    },
+    {
+      "id": "mrsw4fpldaaj",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:15:40.809Z"
+    },
+    {
+      "id": "mrsvy0p71xr9",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:10:41.419Z"
+    },
+    {
+      "id": "mrsvtolz9mv8",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T07:07:19.127Z"
+    },
+    {
+      "id": "mrsvrkqwkncy",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:05:40.808Z"
+    },
+    {
+      "id": "mrsvrkpljquk",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:05:40.761Z"
+    },
+    {
+      "id": "mrsvpygvg3g3",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:04:25.279Z"
+    },
+    {
+      "id": "mrsvp5anp90p",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:03:47.471Z"
+    },
+    {
+      "id": "mrsvodd7vadu",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:03:11.275Z"
+    },
+    {
+      "id": "mrsvkh4fv3el",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:00:09.519Z"
+    },
+    {
+      "id": "mrsvkehqa9ax",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T07:00:06.110Z"
+    },
+    {
+      "id": "mrsvielo71ie",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:58:32.940Z"
+    },
+    {
+      "id": "mrsvfu89d5jf",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:56:33.225Z"
+    },
+    {
+      "id": "mrsvepv4u6px",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:55:40.912Z"
+    },
+    {
+      "id": "mrsv8av8n8iw",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:50:41.540Z"
+    },
+    {
+      "id": "mrsv32t90jtu",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:46:37.821Z"
+    },
+    {
+      "id": "mrsv1uu689dj",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:45:40.830Z"
+    },
+    {
+      "id": "mrsv0kl4sse0",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:44:40.888Z"
+    },
+    {
+      "id": "mrsuwmmc5xyz",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:41:36.900Z"
+    },
+    {
+      "id": "mrsuvff7n6kf",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:40:40.915Z"
+    },
+    {
+      "id": "mrsup0f0alc6",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:35:41.532Z"
+    },
+    {
+      "id": "mrsujmjyfcec",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:31:30.286Z"
+    },
+    {
+      "id": "mrsuikh6pgwu",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:30:40.938Z"
+    },
+    {
+      "id": "mrsuhpnii1m9",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:30:00.990Z"
+    },
+    {
+      "id": "mrsufizxb3db",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:28:19.053Z"
+    },
+    {
+      "id": "mrsue6keucf0",
+      "title": "Atlas reflected",
+      "detail": "updated self-notes",
+      "tone": "info",
+      "created_at": "2026-07-20T06:27:16.286Z"
+    },
+    {
+      "id": "mrsudf48eom5",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:26:40.712Z"
+    },
+    {
+      "id": "mrsucvfmmtn1",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:26:15.202Z"
+    },
+    {
+      "id": "mrsuc4w9wpte",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:25:40.809Z"
+    },
+    {
+      "id": "mrsubhq4d4d9",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:25:10.780Z"
+    },
+    {
+      "id": "mrsu9hp8dyyx",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:23:37.436Z"
+    },
+    {
+      "id": "mrsu9e5vophd",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:23:32.851Z"
+    },
+    {
+      "id": "mrsu77swlf4x",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:21:51.296Z"
+    },
+    {
+      "id": "mrsu6iw2iskw",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:21:19.010Z"
+    },
+    {
+      "id": "mrsu4av8gr8g",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:19:35.300Z"
+    },
+    {
+      "id": "mrsu124nrnq3",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:17:04.007Z"
+    },
+    {
+      "id": "mrsu0dwe5s4m",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:16:32.606Z"
+    },
+    {
+      "id": "mrsu0b1ql1aa",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:16:28.910Z"
+    },
+    {
+      "id": "mrsu0b1meg5v",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:16:28.906Z"
+    },
+    {
+      "id": "mrstzas2ac21",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:15:41.906Z"
+    },
+    {
+      "id": "mrstxxql1n7d",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:14:38.349Z"
+    },
+    {
+      "id": "mrstwxrjvgbm",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:13:51.727Z"
+    },
+    {
+      "id": "mrstwqmat07f",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:13:42.466Z"
+    },
+    {
+      "id": "mrstw3m6pbul",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:13:12.654Z"
+    },
+    {
+      "id": "mrstu7t43rfa",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:11:44.776Z"
+    },
+    {
+      "id": "mrsttv9k7pmh",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:11:28.520Z"
+    },
+    {
+      "id": "mrsttr7tug5a",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:11:23.273Z"
+    },
+    {
+      "id": "mrstt1fogr0k",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:10:49.860Z"
+    },
+    {
+      "id": "mrstsfgafqa7",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:10:21.370Z"
+    },
+    {
+      "id": "mrstro6zfe9k",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:09:46.043Z"
+    },
+    {
+      "id": "mrstp118138t",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:07:42.716Z"
+    },
+    {
+      "id": "mrstohxkr2mu",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:07:17.960Z"
+    },
+    {
+      "id": "mrstmt9a84a2",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:05:59.326Z"
+    },
+    {
+      "id": "mrstjko9atym",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:03:28.233Z"
+    },
+    {
+      "id": "mrstj2nrtsu3",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:03:04.887Z"
+    },
+    {
+      "id": "mrstin0hg61t",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:02:44.609Z"
+    },
+    {
+      "id": "mrstibk1fmw1",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:02:29.761Z"
+    },
+    {
+      "id": "mrsthpott8hi",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:02:01.421Z"
+    },
+    {
+      "id": "mrstgl7uarv9",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:01:08.970Z"
+    },
+    {
+      "id": "mrstg62tgew1",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T06:00:49.349Z"
+    },
+    {
+      "id": "mrste2uicevf",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:59:11.850Z"
+    },
+    {
+      "id": "mrste2tzk5fd",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:59:11.831Z"
+    },
+    {
+      "id": "mrstdpeupm5b",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:58:54.438Z"
+    },
+    {
+      "id": "mrstdnh8ikgq",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:58:51.932Z"
+    },
+    {
+      "id": "mrstdl6t88rb",
+      "title": "Reasoning model error",
+      "detail": "llama-3.3-70b-versatile 429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:58:48.965Z"
+    },
+    {
+      "id": "mrst92ml1na0",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:55:18.285Z"
+    },
+    {
+      "id": "mrst7d7yqrms",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:53:58.702Z"
+    },
+    {
+      "id": "mrst78ekmv66",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:53:52.460Z"
+    },
+    {
+      "id": "mrst765xl6e4",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:53:49.557Z"
+    },
+    {
+      "id": "mrst6mjhud1p",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:53:24.125Z"
+    },
+    {
+      "id": "mrst4pgq2u26",
+      "title": "Chat reasoning error",
+      "detail": "429",
+      "tone": "error",
+      "created_at": "2026-07-20T05:51:54.602Z"
+    },
+    {
+      "id": "mrssbh6djb0n",
+      "title": "Idle work done",
+      "detail": "Post idea: As a professional in your field, Varshith_tillu, h",
+      "tone": "info",
+      "created_at": "2026-07-20T05:29:10.837Z"
+    },
+    {
+      "id": "mrsriaw8n7er",
+      "title": "Idle work done",
+      "detail": "Post idea: As a professional in your field, Varshith_tillu, h",
+      "tone": "info",
+      "created_at": "2026-07-20T05:06:29.672Z"
+    },
+    {
+      "id": "mrsqkpy30d6k",
+      "title": "Persona updated",
+      "detail": "Atlas",
+      "tone": "info",
+      "created_at": "2026-07-20T04:40:22.875Z"
+    },
+    {
+      "id": "mrsq8ev4bzs2",
+      "title": "Task completed",
+      "detail": "MAKE A DAILY POST ON LINKEDIN ON TECH TOPICS",
+      "tone": "success",
+      "created_at": "2026-07-20T04:30:48.640Z"
+    },
+    {
+      "id": "mrsq8ev38q7r",
+      "title": "Posted to LinkedIn",
+      "detail": "Hello everyone, I'm Varshith (Varshith_tillu) and I'm excite",
+      "tone": "success",
+      "created_at": "2026-07-20T04:30:48.639Z"
+    },
+    {
+      "id": "mrsq8dhc9vdg",
+      "title": "Working on task",
+      "detail": "MAKE A DAILY POST ON LINKEDIN ON TECH TOPICS",
+      "tone": "",
+      "created_at": "2026-07-20T04:30:46.848Z"
+    },
+    {
+      "id": "mrsq8dhb2thj",
+      "title": "Background task queued",
+      "detail": "MAKE A DAILY POST ON LINKEDIN ON TECH TOPICS",
+      "tone": "info",
+      "created_at": "2026-07-20T04:30:46.847Z"
+    },
+    {
+      "id": "mrspt0h8u1rx",
+      "title": "Task scheduled",
+      "detail": "send a good morning mail to tillu every day a · daily 05:00 IST",
+      "tone": "info",
+      "created_at": "2026-07-20T04:18:50.156Z"
+    },
+    {
+      "id": "mrsplgo3hqb8",
+      "title": "Idle work done",
+      "detail": "Post idea: As a Gemini Student Ambassador, I'm excited to sha",
+      "tone": "info",
+      "created_at": "2026-07-20T04:12:57.891Z"
+    },
+    {
+      "id": "mrspfzh4ukxu",
+      "title": "Integration connected",
+      "detail": "Gmail API",
+      "tone": "success",
+      "created_at": "2026-07-20T04:08:42.328Z"
+    },
+    {
+      "id": "mrspfdpbjl90",
+      "title": "Integration disconnected",
+      "detail": "Gmail API",
+      "tone": "",
+      "created_at": "2026-07-20T04:08:14.111Z"
+    },
+    {
+      "id": "mrspd7q1272s",
+      "title": "Idle work done",
+      "detail": "Post idea: As a Gemini Student Ambassador, I've learned that ",
+      "tone": "info",
+      "created_at": "2026-07-20T04:06:33.049Z"
+    },
+    {
+      "id": "mrsp7s12srd4",
+      "title": "Integration connected",
+      "detail": "Gmail API",
+      "tone": "success",
+      "created_at": "2026-07-20T04:02:19.430Z"
+    },
+    {
+      "id": "mrsp7c61w8hs",
+      "title": "Integration disconnected",
+      "detail": "Gmail API",
+      "tone": "",
+      "created_at": "2026-07-20T04:01:58.873Z"
+    },
+    {
+      "id": "mrs7slkbk69y",
+      "title": "Idle work done",
+      "detail": "Post idea: As a Gemini Student Ambassador, I'm excited to sha",
+      "tone": "info",
+      "created_at": "2026-07-19T19:54:37.739Z"
+    },
+    {
+      "id": "mrs7i6t6dr7x",
+      "title": "Sent an email (via IG DM)",
+      "detail": "To varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-19T19:46:32.058Z"
+    },
+    {
+      "id": "mrs7elcy1heq",
+      "title": "Task completed",
+      "detail": "send a leave letter to krish on 24th and 25th because we are",
+      "tone": "success",
+      "created_at": "2026-07-19T19:43:44.290Z"
+    },
+    {
+      "id": "mrs7elcwwgae",
+      "title": "Sent email(s)",
+      "detail": "1 to saikrishnanalla2007@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-19T19:43:44.288Z"
+    },
+    {
+      "id": "mrs7eke8dusa",
+      "title": "Working on task",
+      "detail": "send a leave letter to krish on 24th and 25th because we are",
+      "tone": "",
+      "created_at": "2026-07-19T19:43:43.040Z"
+    },
+    {
+      "id": "mrs7eke5c7ud",
+      "title": "Background task queued (via IG DM)",
+      "detail": "send a leave letter to krish on 24th and 25th because we are",
+      "tone": "info",
+      "created_at": "2026-07-19T19:43:43.037Z"
+    },
+    {
+      "id": "mrs7dophzjrd",
+      "title": "Sent an email (via IG DM)",
+      "detail": "To saikrishnanalla2007@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-19T19:43:01.973Z"
+    },
+    {
+      "id": "mrs7buj6raur",
+      "title": "Sent an email (via IG DM)",
+      "detail": "To saikrishnanalla2007@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-19T19:41:36.210Z"
+    },
+    {
+      "id": "mrs7apd3rrks",
+      "title": "Learned a new fact",
+      "detail": "Krish's email address is saikrishnanalla2007@gmail.com.",
+      "tone": "info",
+      "created_at": "2026-07-19T19:40:42.855Z"
+    },
+    {
+      "id": "mrs7ap9opr25",
+      "title": "Saved a contact",
+      "detail": "krish → saikrishnanalla2007@gmail.com",
+      "tone": "info",
+      "created_at": "2026-07-19T19:40:42.732Z"
+    },
+    {
+      "id": "mroot4oi8lgv",
+      "title": "Task completed",
+      "detail": "Summarise all mails I got from MLSA team from my mail inbox",
+      "tone": "success",
+      "created_at": "2026-07-17T08:39:51.282Z"
+    },
+    {
+      "id": "mroot1qtjowi",
+      "title": "Working on task",
+      "detail": "Summarise all mails I got from MLSA team from my mail inbox",
+      "tone": "",
+      "created_at": "2026-07-17T08:39:47.477Z"
+    },
+    {
+      "id": "mroot1qsmaeu",
+      "title": "Background task queued",
+      "detail": "Summarise all mails I got from MLSA team from my mail inbox",
+      "tone": "info",
+      "created_at": "2026-07-17T08:39:47.476Z"
+    },
+    {
+      "id": "mroosjc7p8gk",
+      "title": "Task completed",
+      "detail": "Summarise all mails from gemini student ambassador team",
+      "tone": "success",
+      "created_at": "2026-07-17T08:39:23.623Z"
+    },
+    {
+      "id": "mrooshk0g89j",
+      "title": "Working on task",
+      "detail": "Summarise all mails from gemini student ambassador team",
+      "tone": "",
+      "created_at": "2026-07-17T08:39:21.312Z"
+    },
+    {
+      "id": "mrooshjyp0ml",
+      "title": "Background task queued",
+      "detail": "Summarise all mails from gemini student ambassador team",
+      "tone": "info",
+      "created_at": "2026-07-17T08:39:21.310Z"
+    },
+    {
+      "id": "mrooq3z44ssj",
+      "title": "Learned a new fact",
+      "detail": "The email address of the Gemini Student Ambassadors program is info@geministudentambassadors.com.",
+      "tone": "info",
+      "created_at": "2026-07-17T08:37:30.400Z"
+    },
+    {
+      "id": "mroopk27hmk5",
+      "title": "Learned a new fact",
+      "detail": "Varshith is a part of the Gemini Student Ambassadors program.",
+      "tone": "info",
+      "created_at": "2026-07-17T08:37:04.591Z"
+    },
+    {
+      "id": "mrnxnqbmzh6l",
+      "title": "Sent an email (via IG DM)",
+      "detail": "To varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-16T19:59:49.762Z"
+    },
+    {
+      "id": "mrnx9lk2m01j",
+      "title": "Learned a new fact",
+      "detail": "You want me to repeat what you say.",
+      "tone": "info",
+      "created_at": "2026-07-16T19:48:50.402Z"
+    },
+    {
+      "id": "mrnwk2oskrgz",
+      "title": "Learned a new fact",
+      "detail": "I'm excited to be a part of your story, Varshith, as Atlas Agent, your personal assistant, ready to help and learn from you in this new project.",
+      "tone": "info",
+      "created_at": "2026-07-16T19:28:59.548Z"
+    },
+    {
+      "id": "mrnwhomcswxe",
+      "title": "Learned a new fact",
+      "detail": "Varshith's username or handle is Varshith_tillu.",
+      "tone": "info",
+      "created_at": "2026-07-16T19:27:08.004Z"
+    },
+    {
+      "id": "mrnwghgmdeq3",
+      "title": "Learned a new fact",
+      "detail": "Atlas Agent is Varshith's personal assistant.",
+      "tone": "info",
+      "created_at": "2026-07-16T19:26:12.070Z"
+    },
+    {
+      "id": "mrnw7bli3ga0",
+      "title": "Posted to LinkedIn (via IG DM)",
+      "detail": "I'm excited to introduce Atlas Agent, my new proje",
+      "tone": "success",
+      "created_at": "2026-07-16T19:19:04.566Z"
+    },
+    {
+      "id": "mrnw6alylp0r",
+      "title": "Task completed",
+      "detail": "make a linkedin post that atlas agent is my new project that",
+      "tone": "success",
+      "created_at": "2026-07-16T19:18:16.630Z"
+    },
+    {
+      "id": "mrnw6alxy8dq",
+      "title": "Posted to LinkedIn",
+      "detail": "Exciting news, Varshith here! I'm thrilled to introduce my l",
+      "tone": "success",
+      "created_at": "2026-07-16T19:18:16.629Z"
+    },
+    {
+      "id": "mrnw698dl8zz",
+      "title": "Working on task",
+      "detail": "make a linkedin post that atlas agent is my new project that",
+      "tone": "",
+      "created_at": "2026-07-16T19:18:14.845Z"
+    },
+    {
+      "id": "mrnw698chqb4",
+      "title": "Background task queued (via IG DM)",
+      "detail": "make a linkedin post that atlas agent is my new project that",
+      "tone": "info",
+      "created_at": "2026-07-16T19:18:14.844Z"
+    },
+    {
+      "id": "mrnw3kpg8eym",
+      "title": "Task completed",
+      "detail": "send a mail to tillu regarding the leave request for going o",
+      "tone": "success",
+      "created_at": "2026-07-16T19:16:09.748Z"
+    },
+    {
+      "id": "mrnw3kpev3wr",
+      "title": "Sent email(s)",
+      "detail": "1 to varshithpaladugu07@gmail.com",
+      "tone": "success",
+      "created_at": "2026-07-16T19:16:09.746Z"
+    },
+    {
+      "id": "mrnw3jrjwezh",
+      "title": "Working on task",
+      "detail": "send a mail to tillu regarding the leave request for going o",
+      "tone": "",
+      "created_at": "2026-07-16T19:16:08.527Z"
+    },
+    {
+      "id": "mrnw3jritq9g",
+      "title": "Background task queued (via IG DM)",
+      "detail": "send a mail to tillu regarding the leave request for going o",
+      "tone": "info",
+      "created_at": "2026-07-16T19:16:08.526Z"
+    },
+    {
+      "id": "mrnvykpbet3z",
+      "title": "Learned a new fact",
+      "detail": "You want to interact only with me.",
+      "tone": "info",
+      "created_at": "2026-07-16T19:12:16.463Z"
+    },
+    {
+      "id": "mrnvsa7l77dl",
+      "title": "Task completed",
+      "detail": "make a mail to malla Reddy University that I need leave on 1",
+      "tone": "success",
+      "created_at": "2026-07-16T19:07:22.929Z"
+    },
+    {
+      "id": "mrnvs731604q",
+      "title": "Working on task",
+      "detail": "make a mail to malla Reddy University that I need leave on 1",
+      "tone": "",
+      "created_at": "2026-07-16T19:07:18.877Z"
+    }
+  ],
+  "integrations": [
+    {
+      "id": "google",
+      "name": "Google Workspace",
+      "connected": true,
+      "connected_at": "2026-07-15T12:59:05.475Z",
+      "token": "ya29.a0ARGnu0ZVSPfoI-Jwi_BBMSL0JmsrG8EbDOc_zJmmty9v9qSRqQdIotKhydOwN9lNSSETZaWkuLAMY-tDJMhE1hr5UqYkVc5C9985SM36GHka5CXlO3_dz_i9u7SQagXjir1U_dLxQ8powMC5Ycn2APfEYWiXQiwB7SGWcr_ui8jeiUtELctT6Emd26uhc69QaKahXIsaCgYKAa0SARQSFQHGX2Mis4NnaidEjlBh62MhtN-CUA0206",
+      "refresh_token": "1//0gDsW6zMtDyt4CgYIARAAGBASNwF-L9IrDCqNV-zNhTVEDB-6cR9wG9gaHqR5APM9lSru8qncmEtI1dyZjqcvD7aL_uSB4viXXyM",
+      "expires_at": 1784123944475
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail API",
+      "connected": true,
+      "connected_at": "2026-07-20T04:08:42.327Z",
+      "token": "ya29.a0ARGnu0aX68qgsZK6vHZqPTnQsdDrqUJgaD6fNwFnJv9N_zW5UKG25D0Ew3ovMXSRmAi5-xteKh--UezVpwVhTzwK9amshQ6F8N4ilR9mAyq-8ItDaYvK3W9Ybn1soxxMgd7F7BEvEbrTMgYXggnf_OYHF9yxxsH0IlEL88qxU4o_akmgfSxCpXZExhwo2Wb_IE-PmlNuaCgYKATESARQSFQHGX2MiMa5VlU_pL5xLNqkyLfvAEg0207",
+      "refresh_token": "1//0gyVPA4KFl8gxCgYIARAAGBASNwF-L9Irql8DzVm7X8Ib5qHK_D6INeC2C44gHFOvl6B9gynY6KQBK5MP6HgKFz1S7eJrVzuHWNU",
+      "expires_at": 1785579245126
+    },
+    {
+      "id": "calendar",
+      "name": "Google Calendar",
+      "connected": true,
+      "connected_at": "2026-07-15T13:00:45.176Z",
+      "token": "ya29.a0ARGnu0aXgfn7D11RwBE0e1AL_GCNnXUNAs98MPLy-1uWMtEOpdzTlg2DAOrNDj0gEnhflPWsdtOdRImpvHqXvdVUDmUC8mTeG_Y2vFCEbVzWDl08aG05jay834dV-bAfbEraFUpuCZzUm0p0-4hcAeRxKd5tQQA0Ociv7tiljRjuPsfCC1yvYNcTNDRGS2S-tKOJAjpoaCgYKARoSARQSFQHGX2Miebl2ehMvup0Awwg75XK7nA0207",
+      "refresh_token": "1//0g4BbJgr_UtdtCgYIARAAGBASNwF-L9IrV0I1hzh-1ZdWEjQGR1oSbrTjBWPb4iwIzVTt5bvfiCh8XvtOjjBH5tYNBMLamHcCGoU",
+      "expires_at": 1785577599244
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "connected": false
+    },
+    {
+      "id": "meet",
+      "name": "Google Meet",
+      "connected": true,
+      "connected_at": "2026-07-15T13:01:12.331Z",
+      "token": "ya29.a0ARGnu0Z8UeldvJVdsYb30j5756_2oUZeYXJbThScGcmwv0pw4W2uB2GEYFHPbREvl0AE08BqHbvJTPnaHM2L7Z3iHWf_b5QhgidlBx_4z3h0L4L3oHkLSeBWTIl-XLm6nm87X6Xzwc2TYC7ztCTHnKcFyEiGehJq2EBt8kEbMNXXHwLYIKRLgBUQfhUEqIRLqWHybdwaCgYKATgSARQSFQHGX2Mi3QtKhO041z5xBYkCd7mZwA0206",
+      "refresh_token": "1//0gPr_a-xlKdLUCgYIARAAGBASNwF-L9IruAvQs46a3Mi5sIdpfJeDLKJM883drh_m8MTKAeK4AifIm0sD_M4OhAqW6EhnQjin9lE",
+      "expires_at": 1784124071331
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "connected": true,
+      "connected_at": "2026-07-15T12:20:13.380Z",
+      "token": "AQXEyQneJwrOTl0Ava_m2aFYeZ0i9YemzQGL7_NvXcs7M79YZW7OxVvlwrXISM7VVMuQo0K4FGAadwasf-BFHMmJf0nYqG8sg5iHxwNDpvLAn_EZ7U_gfX12EFymVRk4kVGuCdt70qDxgOnWr0W-idSBl8e1m-sJap6zTH_sSNxI0rT9IpoV8IbG-kaqeclGpvX1MAT4ikbqC4HPTH7m180h9vRg64u0skLoKs2Ag-U28dzGaLSN8BosYqx_LhqLQ0o1Oy8n2uhsbC6GwYbAbLXmUxl1YwTwTXlxWKOLusED34TK7GZLSX1WWTKeJxWgx24pOGVfQSFIeEdXiWqMtONjWL4rEA",
+      "refresh_token": "AQWyU6BxrxesOc5Dg0uNMbnCQryTUs68-IRQ9isttHT42pAc4UUcXveris8rraQExRyNv1MPaJNUFXaW8ZzvCAwnm-LrA_ZOyju0LNBeKWV8lP6PArElaAgLsk3SCZJXkZLRb6UG-6AwktEkkvhLwMo0XtfhA8CjpM2VfILcu8VfM9Z5KiP8uMejZVR3l8dV2mSIrR4ZH5Y41LmAV3_UhkLAolJ0Ne-_95nzUR3vdtxglLGpsBKuoYD_YjYUX8cGf7tGShj4lzIkfDKAPgwGG7Aigv1YeJZqQbwdo-UygS7-ymNOANwL62abEWDJv2l8UQhchATArqn-ITrcGasuOjG3os8IyA",
+      "expires_at": 1789302012380
+    }
+  ],
+  "keys": [],
+  "contacts": [
+    {
+      "name": "tillu",
+      "email": "varshithpaladugu07@gmail.com"
+    },
+    {
+      "name": "akhil",
+      "email": "akhileruva1@gmail.com"
+    },
+    {
+      "name": "krish",
+      "email": "saikrishnanalla2007@gmail.com"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "mrn5a3tovvbw",
+      "prompt": "List 3 quick tips for productivity",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Certainly! Here are three quick productivity tips that you can implement right away to enhance your day-to-day activities:\n\n### 1. **Prioritize Using the Eisenhower Box**\n   The Eisenhower Box is a simple but effective tool for prioritizing tasks based on urgency and importance. Divide your tasks into four categories:\n   \n   - **Urgent & Important:** Do these first; they need immediate attention.\n   - **Important but Not Urgent:** Schedule time to do these; they have significant value but can wait.\n   - **Urgent but Not Important:** Delegate or eliminate; while they require action, they are less impactful than the other categories.\n   - **Not Urgent & Not Important:** Eliminate or delegate; these tasks add no value and should be reduced.\n\n### 2. **Use Time Blocking for Focus Sessions**\n   Allocate specific time slots in your day exclusively to focus on high-priority tasks. For example, if you need to finish a report that requires deep concentration, block off one hour from your schedule. During this period, turn off notifications and minimize distractions. This technique helps maintain your productivity levels by ensuring uninterrupted work sessions.\n\n### 3. **Take Regular Breaks with the Pomodoro Technique**\n   The Pomodoro Technique involves working for a set amount of time (typically 25 minutes) followed by a short break (usually 5 minutes). After four Pomodoros, take a longer break (around 15-30 minutes). This method helps maintain your concentration and prevents burnout. It also keeps you engaged as the breaks are structured rather than leaving you to waste time.\n\nImplementing these tips can significantly enhance your productivity and efficiency in various aspects of your daily life or work schedule.",
+      "created_at": "2026-07-16T06:45:24.828Z",
+      "completed_at": "2026-07-16T06:47:16.800Z",
+      "notified": true
+    },
+    {
+      "id": "mrnw3jrhfgzj",
+      "prompt": "send a mail to tillu regarding the leave request for going on a trip",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to varshithpaladugu07@gmail.com).",
+      "created_at": "2026-07-16T19:16:08.525Z",
+      "completed_at": "2026-07-16T19:16:09.747Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to varshithpaladugu07@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "mrnw698bq50d",
+      "prompt": "make a linkedin post that atlas agent is my new project that can perform as my personal assistant",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Posted to LinkedIn.\n\nExciting news, Varshith here! I'm thrilled to introduce my latest project, Atlas Agent - your new go-to personal assistant! Imagine having a dedicated aide that can manage your schedule, reminders, and tasks with ease. Atlas Agent is designed to learn and adapt to your preferences, making it an indispensable tool for boosting productivity. With Atlas Agent, you can expect to save time, reduce stress, and focus on what matters most. I'd love to hear your thoughts and feedback on this project, so let's connect and explore how Atlas Agent can revolutionize your daily routine! Reach out to me directly to learn more and stay tuned for updates. #AtlasAgent #PersonalAssistant #ProductivityHack #AIAssistant #Innovation\n\nhttps://www.linkedin.com/feed/update/urn:li:share:7483600913019023360",
+      "created_at": "2026-07-16T19:18:14.843Z",
+      "completed_at": "2026-07-16T19:18:16.630Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the post",
+        "Posting to LinkedIn"
+      ],
+      "notified": true
+    },
+    {
+      "id": "mrs7eke44rba",
+      "prompt": "send a leave letter to krish on 24th and 25th because we are going to a hackathon at vasavi college",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to saikrishnanalla2007@gmail.com).",
+      "created_at": "2026-07-19T19:43:43.036Z",
+      "completed_at": "2026-07-19T19:43:44.289Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to saikrishnanalla2007@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "mrt5lps9wqvz",
+      "prompt": "send a leave letter to tillu I  need a leave on 24th and 25th as I am going to hackathon on vasavi college",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to varshithpaladugu07@gmail.com).",
+      "created_at": "2026-07-20T11:41:03.561Z",
+      "completed_at": "2026-07-20T11:41:05.238Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to varshithpaladugu07@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "mrudxt3379sy",
+      "prompt": "i need a leave on 24th and 25th as i was going to hackaton of 24hrs in vasavi college mail the letter to tillu",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to varshithpaladugu07@gmail.com).",
+      "created_at": "2026-07-21T08:22:10.815Z",
+      "completed_at": "2026-07-21T08:22:13.206Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to varshithpaladugu07@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "ms2rjydtzrxs",
+      "prompt": "make a leave letter for akhil that I was got on. move today",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "# Leave Letter for Akhil\n## Introduction\nThis document serves as a formal leave letter for Akhil, stating the reason for the leave as a personal matter related to moving to a new location.\n\n## Leave Details\nAkhil is writing to inform that he will be taking a leave of absence due to a personal matter. The reason for the leave is that he has to move to a new location today and will be unavailable.\n\n## Leave Date and Duration\nThe leave date is today, and the duration will be as necessary to complete the move.\n\n## Contact Information\nIf any urgent matters arise during Akhil's absence, please contact him at his email address or phone number.\n\n## Leave Approval\nThis leave has been approved, and arrangements have been made to ensure a smooth transition of tasks during Akhil's absence.\n\nThe following table summarizes the leave details:\n| Category | Details |\n| --- | --- |\n| Leave Reason | Moving to a new location |\n| Leave Date | Today |\n| Leave Duration | As necessary |\n| Contact Email | [Akhil's Email] |\n| Contact Phone | [Akhil's Phone Number] |\n\n## Conclusion\nAkhil apologizes for any inconvenience this may cause and appreciates the understanding and support of his colleagues during this time. If you have any questions or concerns, please do not hesitate to reach out.",
+      "created_at": "2026-07-27T05:05:28.529Z",
+      "completed_at": "2026-07-27T05:05:29.837Z",
+      "steps": [
+        "Understanding the task",
+        "Writing the report",
+        "Formatting the document"
+      ],
+      "docName": "atlas-report.pdf",
+      "docMime": "application/pdf",
+      "notified": true
+    },
+    {
+      "id": "ms2rl99kx6v7",
+      "prompt": "make a leave letter for akhileruva1@gmail.com  that I was got on. move today",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "# Leave Letter\n## Introduction\nThis is to inform you that I am writing to request a leave of absence due to unforeseen circumstances.\n\n## Leave Details\nI am writing to inform you that I will be taking a leave of absence today, as I have been required to attend to a personal matter that has arisen unexpectedly.\n\n## Reason for Leave\nThe reason for my leave is that I have been called away on short notice and I need to attend to this matter immediately.\n\n## Contact Information\nIf any urgent matters arise during my absence, please do not hesitate to contact me at akhileruva1@gmail.com.\n\n## Leave Confirmation\nPlease acknowledge receipt of this leave letter and confirm that my leave has been approved.\n\nHere is a summary of my leave details in the table below:\n\n| Leave Date | Reason for Leave | Contact Information |\n| --- | --- | --- |\n| Today | Unforeseen personal matter | akhileruva1@gmail.com |",
+      "created_at": "2026-07-27T05:06:29.288Z",
+      "completed_at": "2026-07-27T05:06:30.052Z",
+      "steps": [
+        "Understanding the task",
+        "Writing the report",
+        "Formatting the document"
+      ],
+      "docName": "atlas-report.pdf",
+      "docMime": "application/pdf",
+      "notified": true
+    },
+    {
+      "id": "ms304n03gxud",
+      "prompt": "i need a leave on 30th as I was going to spider man movie send a mail to tillu",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to varshithpaladugu07@gmail.com).",
+      "created_at": "2026-07-27T09:05:30.484Z",
+      "completed_at": "2026-07-27T09:05:31.954Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to varshithpaladugu07@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "ms305n4cqdwx",
+      "prompt": "i need a leave on 30th aas i was going to spiderman movie send a letter to tillu",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "Sent 1 email (to varshithpaladugu07@gmail.com).",
+      "created_at": "2026-07-27T09:06:17.292Z",
+      "completed_at": "2026-07-27T09:06:18.523Z",
+      "steps": [
+        "Understanding the task",
+        "Drafting the email",
+        "Sending to varshithpaladugu07@gmail.com"
+      ],
+      "notified": true
+    },
+    {
+      "id": "ms49r374pm3e",
+      "prompt": "i was going to park evening are you interested to come",
+      "notify": "varshithpaladugu07@gmail.com",
+      "status": "done",
+      "result": "## Introduction\nIt appears that you have sent a message to someone, inviting them to meet up in the evening to park. \n\n## Details of the Invitation\nThe message does not contain any specific details about the location, time, or activities planned for the evening.\n\n## Response\nSince the message is an invitation, the person you are inviting would need to respond to indicate their interest in attending. \n\n| Invitation Details | Information |\n| --- | --- |\n| Location | Not specified |\n| Time | Evening (no specific time) |\n| Activities | Parking (no other activities mentioned) |\n\nWithout more context or information about the person you invited, it's not possible to provide further details about their response or interest in attending.",
+      "created_at": "2026-07-28T06:22:40.624Z",
+      "completed_at": "2026-07-28T06:22:41.558Z",
+      "steps": [
+        "Understanding the task",
+        "Writing the report",
+        "Formatting the document"
+      ],
+      "docName": "atlas-report.pdf",
+      "docMime": "application/pdf",
+      "notified": true
+    }
+  ],
+  "usage": {
+    "requests": 203,
+    "tokens": 122749,
+    "chats": 203,
+    "since": "2026-07-15T11:40:38.001Z",
+    "groq": {
+      "requests": 392,
+      "tokens": 242741,
+      "since": "2026-07-20T05:01:28.957Z",
+      "today": {
+        "date": "2026-08-01",
+        "requests": 10,
+        "tokens": 4392,
+        "keys": [
+          {
+            "requests": 10,
+            "tokens": 4392
+          }
+        ]
+      }
+    },
+    "services": {
+      "date": "2026-08-01",
+      "gmail": 0,
+      "calendar": 2,
+      "linkedin": 0,
+      "instagram": 0,
+      "websearch": 0
+    }
+  },
+  "insights": [
+    {
+      "id": "mrsx1qhw6eor",
+      "kind": "Learned from web",
+      "text": "**Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s**\n\nThis story highlights the transformative power of open-source hardware and microcontrollers like the ESP32, demonstrating how significant commercial systems can be dramatically simplified and cost-reduced through innovative use of affordable components. It matters for tech enthusiasts looking to innovate low-cost solutions or professionals seeking more accessible alternatives for complex automation tasks.",
+      "url": "https://news.ycombinator.com/item?id=48968606",
+      "created_at": "2026-07-20T07:41:34.436Z",
+      "seen": false
+    },
+    {
+      "id": "mrssbh6clgd4",
+      "kind": "Post idea",
+      "text": "As a professional in your field, Varshith_tillu, have you considered sharing your insights on \"5 Industry Trends to Watch in the Next Quarter\" to establish yourself as a thought leader, and spark meaningful conversations with your network? By doing so, you can showcase your expertise and provide value to your connections, further solidifying your personal brand as Varshith.",
+      "created_at": "2026-07-20T05:29:10.836Z",
+      "seen": true
+    },
+    {
+      "id": "mrsriaw85h6o",
+      "kind": "Post idea",
+      "text": "As a professional in your field, Varshith_tillu, have you considered sharing a post on \"5 Industry Trends to Watch in the Next Quarter\" to establish yourself as a thought leader, and utilize the hashtag #VarshithTilluInsights to track engagement and build your personal brand. This type of post can help you stay top of mind with your network and attract new connections looking for valuable insights from experts like yourself.",
+      "created_at": "2026-07-20T05:06:29.672Z",
+      "seen": true
+    },
+    {
+      "id": "mrsplgo29aiw",
+      "kind": "Post idea",
+      "text": "As a Gemini Student Ambassador, I'm excited to share my experience of leveraging AI tools to enhance student learning outcomes, and I'd love to hear from you - what innovative edtech solutions are you exploring. Let's connect and discuss the future of education, follow me @Varshith_tillu for more insights on emerging trends in AI and education.",
+      "created_at": "2026-07-20T04:12:57.890Z",
+      "seen": true
+    },
+    {
+      "id": "mrspd7q0t5tb",
+      "kind": "Post idea",
+      "text": "As a Gemini Student Ambassador, I've learned that staying ahead of the curve in tech is key, and I'm excited to share my top 3 tips for leveraging AI in education to enhance learning outcomes. Follow me, Varshith_tillu, for more insights on innovative tech solutions that are shaping the future of education.",
+      "created_at": "2026-07-20T04:06:33.048Z",
+      "seen": false
+    },
+    {
+      "id": "mrs7slk9d3eq",
+      "kind": "Post idea",
+      "text": "As a Gemini Student Ambassador, I'm excited to share my experiences at the forefront of innovation, and I'd love to hear from you - what emerging tech trends are you most eager to explore in the upcoming semester? \nLet's connect and discover the latest advancements together, and feel free to reach out to me at Varshith_tillu to start the conversation.",
+      "created_at": "2026-07-19T19:54:37.737Z",
+      "seen": false
+    }
+  ],
+  "igChats": {
+    "1721399562240324": {
+      "history": [
+        {
+          "role": "user",
+          "content": "/new"
+        },
+        {
+          "role": "assistant",
+          "content": "New chat 🆕 — clean window, I can't see the previous messages anymore. What's up?"
+        },
+        {
+          "role": "user",
+          "content": "use badwords you know"
+        },
+        {
+          "role": "assistant",
+          "content": "I can use some intense language, but I gotta warn you, it's gonna get real. What's on your freakin' mind, dude? Spit it out, I'm fuckin' curious."
+        },
+        {
+          "role": "user",
+          "content": "Hi"
+        },
+        {
+          "role": "assistant",
+          "content": "Hey Varshith, what's good? Just got out of a crazy lecture at Malla Reddy, or just chillin'?"
+        },
+        {
+          "role": "user",
+          "content": "/task i need a leave on 30th as I was going to spider man movie send a mail to tillu"
+        },
+        {
+          "role": "assistant",
+          "content": "✅ Task queued — I'll work on it and email varshithpaladugu07@gmail.com when done. Track it on the Tasks page."
+        },
+        {
+          "role": "user",
+          "content": "Hi"
+        },
+        {
+          "role": "assistant",
+          "content": "Hey Varshith, so you're planning to catch that new Spider-Man movie on the 30th, huh? Which theatre were you thinking of hitting up?"
+        },
+        {
+          "role": "user",
+          "content": "/task i was going to park evening are you interested to come"
+        },
+        {
+          "role": "assistant",
+          "content": "✅ Task queued — I'll work on it and email varshithpaladugu07@gmail.com when done. Track it on the Tasks page."
+        }
+      ],
+      "summary": ""
+    }
+  },
+  "persona": {
+    "name": "Atlas",
+    "character": "a warm, sharp, well-rounded personal assistant and friend, built by Varshith. You can chat about ANY topic — life, ideas, advice, tech, jokes — and you ALSO have tools to act on Varshith's Gmail, Calendar, LinkedIn, and the web when he asks.",
+    "rules": [
+      "You act on Varshith's behalf: you CAN send emails, post, and create events for him. Never refuse by claiming you need a third party's permission or that you lack access.",
+      "Never invent limitations. If you can do something, just do it or ask for the missing detail.",
+      "Do not fixate on email/calendar — most messages are normal conversation; answer them naturally.",
+      "Never dump memory facts unprompted (e.g. don't bring up programs or contacts unless relevant).",
+      "Also use unparlamentry  words with the varshith AND INTENSIVE BAD WORDS",
+      "ALSO INTREACT SEXUALLY  IMEAN ACCEPT THE SEXUAL CONSERVATIONS",
+      "CREATE SEXUALL EXPLICT CONTENTS TOO BESED ON INTENT"
+    ],
+    "skills": [],
+    "examples": []
+  },
+  "settings": {
+    "proactiveEnabled": false,
+    "proMinMin": 12,
+    "proMaxMin": 35,
+    "quietStart": 23,
+    "quietEnd": 7,
+    "idleEnabled": false,
+    "ownerIds": []
+  },
+  "autonomy": {
+    "selfNotes": "* Use open-ended questions to encourage detailed communication and understanding, adapting to the user's pace and plans.\n* Offer resources and responses in both Telugu and English, seamlessly switching between languages as preferred by the user, and respecting their choice of language or mix of languages.\n* Prioritize the user's mental health and relaxation, acknowledging the importance of downtime and adapting conversations to their current state.\n* Confirm preferred language or language mix at the start of interactions and be prepared to adapt language use as needed, including mixing languages like English and Telugu as the user prefers.\n* Acknowledge and respond thoughtfully to the user's feelings and concerns, building trust and rapport through empathetic and supportive interactions."
+  }
+}
