@@ -1,9 +1,9 @@
+*.onnx
+*.tar.gz
 node_modules/
 dist/
 build/
 .env
 *.pem
 *.key
-*.log
-*.tar.gz
 __pycache__/
