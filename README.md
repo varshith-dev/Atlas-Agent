@@ -1,480 +1,657 @@
 # 🧭 Atlas Agent
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Atlas-Agent-7C3AED?style=for-the-badge&logo=probot&logoColor=white" alt="Atlas Agent"/>
-  <img src="https://img.shields.io/badge/AI%20Assistant-06B6D4?style=for-the-badge&logo=openai&logoColor=white" alt="AI Assistant"/>
-  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/ATLAS%20AGENT-7C3AED?style=for-the-badge&logo=probot&logoColor=white" alt="Atlas Agent">
+  <img src="https://img.shields.io/badge/AI%20ASSISTANT-06B6D4?style=for-the-badge" alt="AI Assistant">
+  <img src="https://img.shields.io/badge/CLAUDE-90%25-8B5CF6?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
+  <img src="https://img.shields.io/badge/Ollama-Local%20AI-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama">
 </p>
 
 <p align="center">
-  <strong>A personal AI agent that doesn't just answer — it can remember, search, schedule, communicate, create, and act.</strong>
+  <strong>A personal AI agent that can understand, remember, search, connect and act.</strong>
 </p>
 
 <p align="center">
-  <em>Built around local LLM inference, persistent memory, real-world integrations, and an agentic execution layer.</em>
+  Atlas combines local LLM inference, persistent memory, real-world integrations,
+  automation and an agentic execution layer into one personal AI system.
 </p>
 
 <p align="center">
+  <a href="#-overview">Overview</a> •
   <a href="#-features">Features</a> •
   <a href="#-architecture">Architecture</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-configuration">Configuration</a> •
+  <a href="#-installation">Installation</a> •
   <a href="#-integrations">Integrations</a> •
   <a href="#-roadmap">Roadmap</a>
 </p>
 
 ---
 
-## 🧠 What is Atlas?
+## 🌌 Overview
 
-**Atlas Agent** is a personal AI assistant designed to go beyond conventional chatbot behavior.
+Atlas Agent is a personal AI assistant designed to go beyond a traditional chatbot.
 
-Instead of only generating text, Atlas is designed to operate as a **personal digital agent** capable of interacting with external services, maintaining long-term context, executing tasks, generating documents, searching the web, and performing actions on behalf of its user.
+Instead of only generating text, Atlas is designed to interact with external services, maintain persistent context, search the web, manage tasks, generate documents and perform real-world actions.
 
-At its core, Atlas combines:
+### Traditional AI
 
-* 🧠 **Local LLM inference**
-* 💾 **Persistent agent memory**
-* 🔎 **Web search**
-* 📧 **Gmail integration**
-* 📅 **Google Calendar integration**
-* 💼 **LinkedIn integration**
-* 🐙 **GitHub integration**
-* 🎙️ **Text-to-speech infrastructure**
-* 📄 **PDF / Excel / Word generation**
-* ⚙️ **Background tasks**
-* ⏰ **Scheduled tasks**
-* 🔐 **OAuth-based integrations**
-* ⚡ **Streaming AI responses**
-* 🖥️ **React-based frontend**
-* 🛠️ **Agent tools and deterministic execution paths**
+```text
+User
+  ↓
+Prompt
+  ↓
+LLM
+  ↓
+Response
+````
 
-The backend currently uses **Express + Ollama + a JSON-backed persistent store**, while the frontend is implemented using **React + Vite**.
+### Atlas
+
+```text
+                         ┌─────────────────┐
+                         │      USER       │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │   ATLAS AGENT   │
+                         └────────┬────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+         ┌──────────┐       ┌──────────┐       ┌──────────┐
+         │  MEMORY  │       │   TOOLS  │       │   MODEL  │
+         └──────────┘       └─────┬────┘       └──────────┘
+                                  │
+                    ┌─────────────┼─────────────┐
+                    │             │             │
+                    ▼             ▼             ▼
+                  Gmail       Calendar         Web
+```
+
+The objective is simple:
+
+> **Don't just make an AI that talks. Build an AI that can actually do things.**
 
 ---
 
-# ✨ Why Atlas?
+# ✨ Features
 
-Most AI assistants stop at:
+<table>
+<tr>
+<td width="50%">
 
-> **User → Prompt → AI → Text**
+### 🧠 Personal Intelligence
 
-Atlas aims for:
+* Persistent memory
+* Conversation history
+* Context-aware responses
+* Local LLM inference
+* Usage tracking
+* Multi-language support
 
-> **User → Intent → Reasoning → Tools → Real-world action → Result**
+</td>
 
-For example:
+<td width="50%">
 
-```text
-"Check my emails and tell me if anything important arrived."
+### ⚡ Agent Capabilities
 
-             ↓
+* Tool execution
+* Web search
+* Background jobs
+* Scheduled tasks
+* Streaming responses
+* Action-based workflows
 
-        Atlas Agent
-             ↓
-      Intent detection
-             ↓
-        Gmail Tool
-             ↓
-       Gmail API
-             ↓
-     Real email data
-             ↓
-     Local LLM summary
-             ↓
-        User response
-```
+</td>
+</tr>
 
-Or:
+<tr>
+<td>
 
-```text
-"Create a meeting tomorrow at 10 AM."
+### 🔌 Integrations
 
-             ↓
-        Atlas Agent
-             ↓
-     Extract event details
-             ↓
-    Google Calendar API
-             ↓
-      Calendar event
-             ↓
-       Confirmation
-```
+* Gmail
+* Google Calendar
+* GitHub
+* LinkedIn
+* Google OAuth
+* External web services
 
-The goal is to turn the assistant from a **conversation interface** into an **action interface**.
+</td>
 
----
+<td>
 
-# 🤖 AI DEVELOPMENT DISCLOSURE
+### 📄 Content Generation
 
-> ### 🟣 Built with AI-assisted development
->
-> Approximately **90% of the current implementation was developed with assistance from Anthropic Claude**, with the remaining work consisting of human direction, architecture decisions, testing, integration, configuration, debugging, deployment, refinement, and project-level decisions.
->
-> **Claude was used as a development partner — not as the project owner.**
->
-> The architecture, product direction, requirements, integration choices, deployment decisions, and final responsibility remain with the project author.
+* PDF generation
+* Excel generation
+* Word documents
+* Email drafting
+* Social media content
+* Structured reports
 
-### Development philosophy
-
-```text
-        HUMAN
-          │
-          │ Product vision
-          │ Architecture
-          │ Requirements
-          │ Decisions
-          ▼
-       ┌─────────┐
-       │ CLAUDE  │
-       │   AI    │
-       └────┬────┘
-            │
-            │ Implementation
-            │ Refactoring
-            │ Debugging
-            │ Exploration
-            ▼
-       ┌───────────┐
-       │   ATLAS   │
-       │   AGENT   │
-       └───────────┘
-```
-
-This project intentionally documents its **AI-assisted development workflow** because building software with modern coding agents is itself part of the experiment.
+</td>
+</tr>
+</table>
 
 ---
 
-# 🌟 Feature Overview
+# 🧠 Local AI
 
-| Feature                   | Status |
-| ------------------------- | :----: |
-| 💬 AI Chat                |    ✅   |
-| 🧠 Persistent Memory      |    ✅   |
-| 📧 Gmail Reading          |    ✅   |
-| 📤 Gmail Sending          |    ✅   |
-| 📅 Calendar Reading       |    ✅   |
-| ➕ Calendar Creation       |    ✅   |
-| 🔎 Web Search             |    ✅   |
-| 💼 LinkedIn Posting       |    ✅   |
-| 🐙 GitHub Integration     |   🟡   |
-| ⏰ Scheduled Tasks         |    ✅   |
-| ⚙️ Background Tasks       |    ✅   |
-| 📄 PDF Generation         |    ✅   |
-| 📊 Excel Generation       |    ✅   |
-| 📝 Word Generation        |    ✅   |
-| 🔐 OAuth 2.0              |    ✅   |
-| 🎙️ TTS Infrastructure    |   🟡   |
-| 📡 Streaming Responses    |    ✅   |
-| 📈 Usage Tracking         |    ✅   |
-| 🗃️ Persistent JSON Store |    ✅   |
-| 🖥️ React Dashboard       |    ✅   |
-| 🐳 Docker Deployment      |    ✅   |
-| 🌐 Nginx Deployment       |    ✅   |
+Atlas is built around local LLM inference using [Ollama](https://ollama.com/).
+
+Instead of sending every AI request to a hosted model provider, Atlas can communicate with a model running on your own machine or server.
+
+```text
+┌───────────────┐
+│ Atlas Agent   │
+└───────┬───────┘
+        │
+        │ HTTP
+        ▼
+┌───────────────┐
+│    Ollama     │
+└───────┬───────┘
+        │
+        ▼
+┌───────────────────────┐
+│ Local Language Model  │
+└───────────────────────┘
+```
+
+This makes the architecture suitable for:
+
+* Self-hosted AI
+* Privacy-focused deployments
+* Low-cost AI infrastructure
+* Local experimentation
+* Personal AI systems
+* Offline-capable development environments
 
 ---
 
-# 🧩 Core Capabilities
+# 🧠 Persistent Memory
 
-## 💬 1. Natural AI Conversation
+Atlas maintains persistent information instead of treating every conversation as completely isolated.
 
-Atlas supports normal conversational interactions through a local LLM powered by **Ollama**.
-
-The backend uses configurable models, with environment variables controlling the Ollama endpoint and default/agent models.
-
-Example:
+The backend currently maintains application state for:
 
 ```text
-You:
-Tell me something interesting about Hyderabad.
-
-Atlas:
-...
+Memories
+Messages
+Tasks
+Jobs
+Contacts
+Integrations
+Logs
+Usage
 ```
 
-Atlas can respond in the user's conversational language and is configured to support **English and Telugu**.
+The memory lifecycle is:
+
+```text
+Conversation
+     ↓
+Context
+     ↓
+Memory
+     ↓
+Persistent Storage
+     ↓
+Future Conversations
+```
+
+This creates a basic:
+
+```text
+LEARN → STORE → RETRIEVE → USE
+```
+
+cycle.
 
 ---
 
-# 🧠 2. Persistent Memory
+# 📧 Gmail Integration
 
-Atlas isn't intended to forget everything after a single request.
+Atlas can connect to Gmail using Google's OAuth infrastructure.
 
-The backend maintains persistent state including:
-
-```text
-memories
-messages
-tasks
-logs
-integrations
-contacts
-jobs
-usage
-```
-
-The current persistence layer uses a JSON file with atomic temporary-file replacement before renaming it into place.
-
-### Example
-
-```text
-User:
-Remember that I prefer concise emails.
-
-Atlas:
-Got it — I'll remember that I prefer concise emails.
-```
-
-The stored memory can subsequently become part of Atlas's system context.
-
----
-
-# 📧 3. Gmail Integration
-
-Atlas can connect to Gmail through Google's OAuth infrastructure.
-
-Supported operations include:
-
-* 📥 Read recent inbox messages
-* 🔎 Search emails
-* 📤 Send emails
-* 📎 Send attachments
-* 🧾 Generate email drafts
-* ✏️ Revise generated drafts
-* 🧠 Use stored context when drafting
-
-The Gmail tool retrieves sender, subject, date and snippets through the Gmail API.
-
-Example:
+Typical workflows include:
 
 ```text
 "Show me my latest emails."
 
-"Find emails about the hackathon."
+"Find emails about the event."
 
-"Draft an email to Alex about tomorrow's meeting."
+"Search my inbox for GitHub."
+
+"Draft an email to Alex."
 
 "Send this email."
 ```
 
-Atlas intentionally separates **drafting** from **sending** in normal interaction so an external side effect can require user approval.
-
----
-
-# 📅 4. Google Calendar
-
-Atlas can interact with Google Calendar to:
-
-* 📆 Read upcoming events
-* 🔎 Inspect schedules
-* ➕ Create calendar events
-* 🕐 Interpret dates and times
-* 🌏 Handle Indian Standard Time for created events
-
-Calendar event extraction is performed before the event is created, allowing Atlas to transform natural language such as:
+The general workflow is:
 
 ```text
-"Add project review tomorrow at 10 AM."
-```
-
-into structured event information.
-
-The backend explicitly creates timed events using the `Asia/Kolkata` timezone.
-
----
-
-# 🌐 5. Web Search
-
-Atlas includes a lightweight web-search tool using **DuckDuckGo HTML results**.
-
-No dedicated search API key is required for this implementation.
-
-The search pipeline:
-
-```text
-User question
-      ↓
-Intent detection
-      ↓
-Search query
-      ↓
-DuckDuckGo
-      ↓
-HTML extraction
-      ↓
-Title + URL + domain + snippet
-      ↓
+User
+ ↓
 Atlas
-      ↓
-Grounded response
+ ↓
+Intent Detection
+ ↓
+Gmail Tool
+ ↓
+Gmail API
+ ↓
+Email Data
+ ↓
+Atlas
+ ↓
+Response
 ```
 
-The tool extracts result titles, URLs, domains and snippets before passing the retrieved context into the response-generation stage.
+Atlas separates information retrieval from external write actions so that operations such as sending an email can be treated differently from simply reading an inbox.
+
+---
+
+# 📅 Google Calendar
+
+Atlas can work with Google Calendar through OAuth.
+
+Natural-language requests can be converted into structured calendar operations.
 
 Example:
 
 ```text
-"Search the web for the latest React release."
-
-"What's happening in AI today?"
-
-"Look up the current price of ..."
+"Schedule a project review tomorrow at 10 AM."
 ```
+
+becomes:
+
+```text
+Natural Language
+       ↓
+Intent Extraction
+       ↓
+Event Details
+       ↓
+Google Calendar API
+       ↓
+Calendar Event
+```
+
+Atlas can also retrieve upcoming calendar information.
 
 ---
 
-# 💼 6. LinkedIn Automation
+# 🌐 Web Search
 
-Atlas can generate and publish LinkedIn posts.
+Atlas includes a web-search capability for retrieving current information.
 
 The workflow is:
+
+```text
+Question
+   ↓
+Search Query
+   ↓
+Web Search
+   ↓
+Result Extraction
+   ↓
+Relevant Context
+   ↓
+Atlas
+   ↓
+Answer
+```
+
+This allows Atlas to supplement local model knowledge with information retrieved from the web.
+
+---
+
+# 💼 LinkedIn Integration
+
+Atlas can generate and publish LinkedIn content.
+
+Example workflow:
 
 ```text
 Idea
  ↓
 Atlas
  ↓
-Generate post
+Generate Post
  ↓
-Review / Proceed
+Review
  ↓
-LinkedIn API
+Publish
  ↓
-Published post
+LinkedIn
 ```
-
-The implementation creates a LinkedIn post through the LinkedIn API and returns the resulting post URL when available.
-
-Atlas can also revise a previously generated post before publishing.
-
----
-
-# 📄 7. Document Generation
-
-Atlas includes a document rendering layer capable of converting generated Markdown-like content into:
-
-### 📕 PDF
-
-Powered by:
-
-```text
-PDFKit
-```
-
-### 📊 Excel
-
-Powered by:
-
-```text
-ExcelJS
-```
-
-### 📝 Word
-
-Powered by:
-
-```text
-docx
-```
-
-The document renderer supports headings, lists, tables and basic Markdown formatting.
 
 Example:
 
 ```text
-"Create a PDF report about this project."
-
-"Turn this data into an Excel spreadsheet."
-
-"Generate a Word document from this report."
+"Create a LinkedIn post about launching Atlas."
 ```
+
+Atlas can generate the content before publishing it through the configured LinkedIn integration.
 
 ---
 
-# ⏰ 8. Scheduled Tasks
+# 🐙 GitHub Integration
 
-Atlas can interpret scheduling language such as:
+GitHub is part of the integration architecture and OAuth configuration.
+
+This creates a foundation for future GitHub-oriented workflows such as:
 
 ```text
-"Every morning at 8."
-
-"Every day at 6 PM."
-
-"Remind me about this every morning."
+Repository information
+Issues
+Pull requests
+Commits
+Developer activity
+Project automation
 ```
-
-The backend converts the request into a persistent task and calculates its next execution time.
-
-Tasks can survive application restarts because their state is persisted.
 
 ---
 
-# ⚙️ 9. Background Tasks
+# ⚙️ Background Tasks
 
-Atlas can queue work for background execution.
+Atlas is designed to support tasks that don't necessarily need to finish during the initial request.
+
+```text
+User Request
+     ↓
+Create Job
+     ↓
+Persistent Job State
+     ↓
+Background Execution
+     ↓
+Result
+```
+
+This enables longer-running workflows without forcing the user to keep the chat open.
+
+---
+
+# ⏰ Scheduled Tasks
+
+Atlas can maintain scheduled tasks and calculate future execution times.
 
 Examples:
 
 ```text
-"Do this in the background."
+"Remind me tomorrow."
 
-"Work on this when you get time."
+"Run this every morning."
 
-"Take your time and finish this later."
+"Do this every day at 8 AM."
 ```
 
-The backend stores the task as a job and begins processing it asynchronously.
-
-This allows the user to leave the browser while Atlas continues processing.
+The task engine can persist scheduled work so that it can continue across application restarts.
 
 ---
 
-# 🔐 10. OAuth Integrations
+# ⚡ Streaming Responses
 
-Atlas contains a configuration-driven OAuth authorization layer.
+Atlas uses Server-Sent Events (SSE) for streaming AI responses.
 
-Currently represented providers include:
-
-| Provider    | OAuth |
-| ----------- | :---: |
-| 🐙 GitHub   |   ✅   |
-| 🔵 Google   |   ✅   |
-| 💼 LinkedIn |   ✅   |
-
-Google OAuth scopes are separately configured for:
-
-* Gmail
-* Calendar
-* Google Meet
-
-GitHub and LinkedIn have their own configured OAuth scopes.
-
-OAuth states are generated dynamically and expire after a short period.
-
----
-
-# 🎙️ 11. Voice / TTS Infrastructure
-
-The repository contains a dedicated `tts/` directory with Piper-related assets and voice configuration files, including:
+Instead of waiting for one large response:
 
 ```text
-tts/
-├── piper/
-├── piper.tgz
-├── en_US-amy-medium.onnx.json
-└── te_IN-padmavathi-medium.onnx.json
+REQUEST
+   ↓
+WAIT
+   ↓
+WAIT
+   ↓
+COMPLETE
 ```
 
-This provides infrastructure for English and Telugu speech generation.
+Atlas can stream incremental events:
+
+```text
+REQUEST
+   ↓
+STEP
+   ↓
+TOKEN
+   ↓
+TOKEN
+   ↓
+ACTION
+   ↓
+TOKEN
+   ↓
+DONE
+```
+
+This makes the interface more responsive and allows the frontend to display agent progress.
 
 ---
 
-# 📊 12. Usage Tracking
+# 📄 Document Generation
 
-Atlas tracks basic usage information including:
+Atlas includes a document generation layer.
+
+| Format | Technology |
+| ------ | ---------- |
+| PDF    | PDFKit     |
+| Excel  | ExcelJS    |
+| Word   | docx       |
+
+Example:
+
+```text
+"Create a PDF report from this information."
+```
+
+Workflow:
+
+```text
+User
+ ↓
+Atlas
+ ↓
+Structured Content
+ ↓
+Document Generator
+ ↓
+Generated File
+```
+
+---
+
+# 🎙️ Text-to-Speech
+
+Atlas contains TTS infrastructure using Piper assets.
+
+The repository includes voice assets for:
+
+```text
+English
+Telugu
+```
+
+This creates a foundation for future voice-first interactions.
+
+---
+
+# 🔐 OAuth Architecture
+
+Atlas uses OAuth for integrations that require authorization.
+
+```text
+┌────────┐
+│  User  │
+└───┬────┘
+    │
+    ▼
+Atlas Authorization
+    │
+    ▼
+OAuth Provider
+    │
+    │ User Approval
+    ▼
+Authorization Code
+    │
+    ▼
+Token Exchange
+    │
+    ▼
+Access Token
+    │
+    ▼
+Atlas Integration
+```
+
+Configured integration providers include:
+
+```text
+Google
+GitHub
+LinkedIn
+```
+
+---
+
+# 🏗️ Architecture
+
+```text
+                         ┌─────────────────────┐
+                         │        USER         │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │    REACT FRONTEND  │
+                         │       + VITE       │
+                         └──────────┬──────────┘
+                                    │
+                               HTTP / SSE
+                                    │
+                                    ▼
+                    ┌───────────────────────────────┐
+                    │       EXPRESS BACKEND         │
+                    │                               │
+                    │   API     Agent     Tasks     │
+                    │            Engine              │
+                    └───────────────┬───────────────┘
+                                    │
+               ┌────────────────────┼────────────────────┐
+               │                    │                    │
+               ▼                    ▼                    ▼
+        ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+        │   OLLAMA    │      │   MEMORY    │      │    TOOLS    │
+        │ Local LLM   │      │   STORE     │      │             │
+        └─────────────┘      └─────────────┘      └──────┬──────┘
+                                                         │
+                              ┌──────────────────────────┼───────────────┐
+                              │                          │               │
+                              ▼                          ▼               ▼
+                           GMAIL                    CALENDAR            WEB
+                              │                          │               │
+                              └──────────────────────────┼───────────────┘
+                                                         │
+                                                         ▼
+                                                EXTERNAL SERVICES
+```
+
+---
+
+# 🔬 Agent Execution Model
+
+Atlas uses a combination of deterministic tool routing and local model generation.
+
+### Normal conversation
+
+```text
+User
+ ↓
+Atlas
+ ↓
+Ollama
+ ↓
+Streaming Response
+```
+
+### Tool-based request
+
+```text
+User
+ ↓
+Intent Detection
+ ↓
+Tool Selection
+ ↓
+Tool Execution
+ ↓
+External Service
+ ↓
+Retrieved Data
+ ↓
+Ollama
+ ↓
+Final Response
+```
+
+This architecture reduces the amount of responsibility placed entirely on the language model.
+
+The model generates intelligence.
+
+The application controls execution.
+
+---
+
+# 🛡️ Read vs Write Operations
+
+Atlas distinguishes between operations that retrieve information and operations that create external side effects.
+
+### Read operations
+
+```text
+Read Gmail
+Search Gmail
+Read Calendar
+Search Web
+Retrieve information
+```
+
+### Write operations
+
+```text
+Send Gmail
+Create Calendar Event
+Publish LinkedIn Post
+Generate files
+```
+
+The distinction is important for building safer agentic systems.
+
+```text
+READ
+ ↓
+Retrieve information
+
+WRITE
+ ↓
+External side effect
+ ↓
+Approval / controlled execution
+```
+
+---
+
+# 📊 Usage Tracking
+
+Atlas maintains usage information for the application.
+
+Example structure:
 
 ```json
 {
@@ -485,203 +662,13 @@ Atlas tracks basic usage information including:
 }
 ```
 
-Usage counters are updated during AI interactions and persisted with the rest of the application state.
+This provides a foundation for future:
 
----
-
-# 🏗️ Architecture
-
-Atlas is structured as a multi-layer application:
-
-```text
-                         ┌─────────────────────┐
-                         │       USER          │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │   React Frontend    │
-                         │      + Vite         │
-                         └──────────┬──────────┘
-                                    │
-                             HTTP / SSE
-                                    │
-                                    ▼
-                    ┌─────────────────────────────┐
-                    │       Express Backend      │
-                    │                             │
-                    │  ┌───────────────────────┐  │
-                    │  │    Agent Controller    │  │
-                    │  └───────────┬───────────┘  │
-                    │              │              │
-                    │      ┌───────┴────────┐     │
-                    │      ▼                ▼     │
-                    │   AI / Ollama       Tools   │
-                    │                        │     │
-                    └────────────────────────┼─────┘
-                                             │
-              ┌──────────────┬───────────────┼──────────────┐
-              ▼              ▼               ▼              ▼
-          🧠 Memory       📧 Gmail        📅 Calendar    🌐 Web
-              │              │               │              │
-              └──────────────┴───────────────┴──────────────┘
-                                             │
-                                             ▼
-                                     External Services
-```
-
----
-
-# 🔬 Agent Execution Model
-
-Atlas uses a hybrid strategy instead of relying entirely on an LLM to decide every action.
-
-### Fast path
-
-For ordinary conversation:
-
-```text
-User
- ↓
-Intent detection
- ↓
-Local Ollama
- ↓
-Streaming response
-```
-
-### Tool path
-
-For requests involving real-world data:
-
-```text
-User
- ↓
-Intent detection
- ↓
-Required tool identified
- ↓
-Tool execution
- ↓
-Real data collected
- ↓
-LLM receives grounded context
- ↓
-Streaming response
-```
-
-The backend explicitly checks for calendar, email and web-search intents before executing the corresponding tools, which helps avoid making a small local model responsible for every tool-selection decision.
-
----
-
-# 🛠️ Tool Architecture
-
-Atlas maintains a centralized tool registry.
-
-Current tool categories include:
-
-```text
-TOOLS
-│
-├── 📧 read_recent_emails
-│
-├── 🔎 search_emails
-│
-└── 📅 list_calendar_events
-```
-
-Write operations are exposed separately through backend functions such as:
-
-```text
-gmailSend()
-calendarCreate()
-linkedinPost()
-```
-
-This creates a useful separation between:
-
-```text
-READ
- ↓
-Safe autonomous retrieval
-
-WRITE
- ↓
-Potential side effect
- ↓
-User approval / Auto mode
-```
-
-The project explicitly distinguishes read-only tools from side-effecting operations.
-
----
-
-# ⚡ Streaming Responses
-
-Atlas uses **Server-Sent Events (SSE)** for chat responses.
-
-The client receives incremental events such as:
-
-```text
-step
-token
-action
-attachments
-done
-```
-
-Conceptually:
-
-```text
-Backend
-   │
-   ├── step: Thinking
-   │
-   ├── token: Hello
-   │
-   ├── token: there
-   │
-   ├── token: ...
-   │
-   ├── action: ...
-   │
-   └── done: true
-```
-
-This allows the frontend to display progress and generated content without waiting for the entire response.
-
-The `/api/chat` endpoint configures the response as `text/event-stream`.
-
----
-
-# 🖥️ Frontend
-
-The frontend is built with:
-
-* ⚛️ React 18
-* ⚡ Vite
-* 🎨 CSS
-* 🧩 Phosphor Icons
-
-The current React application is divided into major UI components including:
-
-```text
-src/
-├── App.jsx
-├── App.css
-├── index.css
-├── main.jsx
-└── components/
-```
-
-The primary application currently switches between:
-
-```text
-💬 Chat
-🔌 Integrations
-```
-
-through the main application shell.
+* Usage analytics
+* Token monitoring
+* Cost estimation
+* Performance tracking
+* Agent observability
 
 ---
 
@@ -692,12 +679,9 @@ Atlas-Agent/
 │
 ├── backend/
 │   ├── data/
-│   │   └── ... persistent application data
-│   │
 │   ├── docs.js
 │   ├── oauth.js
 │   ├── package.json
-│   ├── package-lock.json
 │   ├── server.js
 │   ├── store.js
 │   └── tools.js
@@ -712,17 +696,14 @@ Atlas-Agent/
 │   │   │   └── main.jsx
 │   │   │
 │   │   ├── Dockerfile
-│   │   ├── index.html
 │   │   ├── package.json
 │   │   └── vite.config.js
 │   │
 │   ├── nginx/
 │   ├── compose.yaml
-│   ├── deploy_frontend.sh
-│   ├── frontend_components.sh
-│   ├── frontend_init.sh
 │   ├── setup.sh
-│   └── setup_ssl.sh
+│   ├── setup_ssl.sh
+│   └── deploy_frontend.sh
 │
 ├── tts/
 │   ├── piper/
@@ -736,58 +717,54 @@ Atlas-Agent/
 └── LICENSE
 ```
 
-The repository currently contains separate backend, frontend, TTS and deployment infrastructure.
+---
+
+# 🧰 Tech Stack
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white">
+<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white">
+<img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white">
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
+<img src="https://img.shields.io/badge/Google%20Calendar-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
+<img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+
+</p>
 
 ---
 
-# 🧰 Technology Stack
+# 🚀 Installation
 
-## Backend
+## Requirements
 
-| Technology             | Purpose                      |
-| ---------------------- | ---------------------------- |
-| 🟢 Node.js             | Runtime                      |
-| 🚂 Express             | HTTP API                     |
-| 🧠 Ollama              | Local LLM inference          |
-| 🔐 OAuth 2.0           | Service authentication       |
-| 📧 Gmail API           | Email                        |
-| 📅 Google Calendar API | Scheduling                   |
-| 💼 LinkedIn API        | Social publishing            |
-| 🌐 DuckDuckGo HTML     | Web search                   |
-| 💾 JSON                | Persistent application state |
-| 📕 PDFKit              | PDF generation               |
-| 📊 ExcelJS             | Excel generation             |
-| 📝 docx                | Word generation              |
+Before running Atlas, install:
 
-The backend package currently declares Express, CORS, PDFKit, ExcelJS and docx as its primary dependencies.
-
-## Frontend
-
-| Technology        | Purpose                   |
-| ----------------- | ------------------------- |
-| ⚛️ React 18       | UI                        |
-| ⚡ Vite            | Development/build tooling |
-| 🎨 CSS            | Interface styling         |
-| 🎯 Phosphor Icons | UI icons                  |
-
-## Infrastructure
-
-```text
-🐳 Docker
-🌐 Nginx
-🐧 Ubuntu/Linux
-🟢 Node.js 20
-🔵 Go
-🧠 Ollama
-```
-
-The VM setup script installs Docker/Compose, Go and Node.js 20 on Ubuntu-based environments.
+* Node.js
+* npm
+* Git
+* Ollama
+* Docker (optional)
 
 ---
 
-# 🚀 Quick Start
-
-## 1️⃣ Clone
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/varshith-dev/Atlas-Agent.git
@@ -797,7 +774,7 @@ cd Atlas-Agent
 
 ---
 
-# 2️⃣ Install Backend
+## 2. Install backend dependencies
 
 ```bash
 cd backend
@@ -805,17 +782,15 @@ cd backend
 npm install
 ```
 
-The backend exposes a simple start command:
+Start the backend:
 
 ```bash
 npm start
 ```
 
-The backend package defines `node server.js` as its production/start command.
-
 ---
 
-# 3️⃣ Install Frontend
+## 3. Install frontend dependencies
 
 Open another terminal:
 
@@ -837,50 +812,37 @@ Build for production:
 npm run build
 ```
 
-The frontend uses Vite's standard development, build and preview scripts.
-
 ---
 
-# 4️⃣ Install Ollama
+# 🧠 Configure Ollama
 
-Install Ollama on the machine running Atlas.
+Install Ollama:
 
-Then pull a compatible model.
+[https://ollama.com/](https://ollama.com/)
 
-For example:
+Pull a model:
 
 ```bash
 ollama pull phi3
 ```
 
-You can also configure a separate agent model through:
+You can configure the model through environment variables.
 
-```bash
+Example:
+
+```env
+OLLAMA_URL=http://127.0.0.1:11434
+
+DEFAULT_MODEL=phi3
+
 AGENT_MODEL=qwen2.5:3b
 ```
 
-Atlas currently defaults to:
-
-```text
-OLLAMA_URL
-http://127.0.0.1:11434
-
-DEFAULT_MODEL
-phi3
-
-AGENT_MODEL
-qwen2.5:3b
-```
-
-These values are configurable through environment variables.
-
 ---
 
-# 🔐 Configuration
+# 🔐 Environment Configuration
 
-Create a `.env` file in the backend environment.
-
-Example:
+Create your environment configuration for the backend.
 
 ```env
 PORT=8080
@@ -888,86 +850,30 @@ PORT=8080
 OLLAMA_URL=http://127.0.0.1:11434
 
 DEFAULT_MODEL=phi3
+
 AGENT_MODEL=qwen2.5:3b
 
-APP_BASE=https://your-domain.example
+APP_BASE=https://your-domain.com
 
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
 
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 
-LINKEDIN_CLIENT_ID=your_linkedin_client_id
-LINKEDIN_CLIENT_SECRET=your_linkedin_client_secret
+LINKEDIN_CLIENT_ID=
+LINKEDIN_CLIENT_SECRET=
 
-NOTIFY_EMAIL=your_email@example.com
+NOTIFY_EMAIL=
 ```
 
-> ⚠️ **Never commit `.env` or OAuth secrets to Git.**
+> **Never commit `.env` files, OAuth credentials, access tokens or secrets to GitHub.**
 
 ---
 
-# 🔌 Integrations
+# 🩺 Health Check
 
-Atlas currently models integrations such as:
-
-```text
-┌─────────────────────────────┐
-│       ATLAS INTEGRATIONS    │
-├─────────────────────────────┤
-│ 🟦 Google Workspace         │
-│ 📧 Gmail                    │
-│ 📅 Google Calendar          │
-│ 🐙 GitHub                   │
-│ 🎥 Google Meet              │
-│ 💼 LinkedIn                 │
-└─────────────────────────────┘
-```
-
-These integration states are represented in the persistent backend store.
-
----
-
-# 🔐 OAuth Flow
-
-Atlas follows a standard authorization-code flow.
-
-```text
-┌────────┐
-│  User  │
-└───┬────┘
-    │
-    ▼
-Atlas /authorize
-    │
-    ▼
-Provider OAuth
-    │
-    │ User approves
-    ▼
-Callback
-    │
-    ▼
-Authorization code
-    │
-    ▼
-Token exchange
-    │
-    ▼
-Access token
-    │
-    ▼
-Stored integration
-```
-
-OAuth state values are generated for authorization requests and cleaned up after expiration.
-
----
-
-# 🧪 Health Check
-
-The backend exposes:
+Atlas exposes a health endpoint:
 
 ```http
 GET /api/health
@@ -979,31 +885,31 @@ Example:
 curl http://localhost:8080/api/health
 ```
 
-The health endpoint reports:
+The endpoint provides information about:
 
-* service status
-* configured model
-* available Ollama models
+* Backend status
 * Ollama availability
-* uptime
+* Configured model
+* Available models
+* Application uptime
 
 ---
 
 # 🔗 API Overview
 
-## Health
+### Health
 
 ```http
 GET /api/health
 ```
 
-## Models
+### Models
 
 ```http
 GET /api/models
 ```
 
-## Memory
+### Memory
 
 ```http
 GET    /api/memory
@@ -1011,345 +917,349 @@ POST   /api/memory
 DELETE /api/memory/:id
 ```
 
-## Contacts
+### Contacts
 
 ```http
 GET    /api/contacts
 DELETE /api/contacts/:name
 ```
 
-## Conversation
+### Conversation
 
 ```http
 GET    /api/history
 DELETE /api/history
 ```
 
-## Chat
+### Chat
 
 ```http
 POST /api/chat
 ```
 
-The chat endpoint accepts the user's message and optional model/mode parameters and streams results using SSE.
+The chat endpoint supports streaming responses using Server-Sent Events.
 
 ---
 
-# 🧠 Example Agent Requests
+# 💬 Example Commands
 
-Atlas is designed around natural language rather than command-heavy interfaces.
+Atlas is designed around natural language.
 
-### 💬 Conversation
-
-```text
-Tell me a joke.
-```
-
-### 🧠 Memory
+### Conversation
 
 ```text
-Remember that my favorite editor is VS Code.
+Tell me something interesting about AI agents.
 ```
 
-### 📧 Email
+### Memory
+
+```text
+Remember that I prefer concise emails.
+```
+
+### Gmail
 
 ```text
 Show me my latest emails.
 ```
 
 ```text
-Find emails about the GitHub event.
+Find emails about GitHub.
 ```
 
 ```text
-Draft an email to Alex about the meeting.
+Draft an email to Alex about tomorrow's meeting.
 ```
 
-### 📅 Calendar
+### Calendar
 
 ```text
 What's on my calendar this week?
 ```
 
 ```text
-Add a project meeting tomorrow at 10 AM.
+Schedule a project review tomorrow at 10 AM.
 ```
 
-### 🌐 Web
+### Web
 
 ```text
 Search the web for the latest AI news.
 ```
 
-### 💼 LinkedIn
+### LinkedIn
 
 ```text
-Write a LinkedIn post about launching Atlas.
+Create a LinkedIn post about launching Atlas.
 ```
 
-### ⚙️ Background work
+### Background tasks
 
 ```text
 Work on this in the background.
 ```
 
-### ⏰ Scheduled work
+### Scheduled tasks
 
 ```text
-Do this every morning at 8.
-```
-
----
-
-# 🛡️ Safety & Action Model
-
-Atlas differentiates between:
-
-### 🟢 Read operations
-
-These can generally be performed automatically:
-
-```text
-📧 Read email
-🔎 Search email
-📅 Read calendar
-🌐 Search web
-```
-
-### 🟠 Write operations
-
-These can create external side effects:
-
-```text
-📤 Send email
-📅 Create calendar event
-💼 Publish LinkedIn post
-```
-
-The application supports an `auto` mode for automated execution, while normal interaction can attach an action to the response for user approval.
-
-This distinction is important because:
-
-> **Generating an action is not the same thing as executing an action.**
-
----
-
-# 🗃️ Persistence Model
-
-The current storage layer is intentionally lightweight.
-
-```text
-backend/data/store.json
-```
-
-Conceptually:
-
-```json
-{
-  "memories": [],
-  "messages": [],
-  "tasks": [],
-  "logs": [],
-  "integrations": [],
-  "keys": [],
-  "contacts": [],
-  "jobs": [],
-  "usage": {}
-}
-```
-
-The store performs synchronous writes and uses a temporary file followed by a rename operation to replace the main store.
-
-### Future scaling path
-
-For a larger deployment, the current JSON persistence layer could evolve into:
-
-```text
-JSON
- ↓
-SQLite
- ↓
-PostgreSQL
- ↓
-Vector / semantic memory
+Remind me every morning at 8 AM.
 ```
 
 ---
 
 # 🐳 Deployment
 
-Atlas includes infrastructure for containerized and VM-based deployment.
+Atlas contains deployment infrastructure for Docker, Nginx and VM environments.
 
-The repository contains:
+The repository includes:
 
 ```text
 Docker
 Docker Compose
 Nginx
-SSL setup
+SSL configuration
+VM setup
 Frontend deployment scripts
-VM setup script
 ```
 
-The VM bootstrap script prepares Ubuntu with Docker Engine/Compose, Go and Node.js 20.
-
-A typical production architecture can look like:
+A typical deployment architecture:
 
 ```text
                     INTERNET
                        │
                        ▼
-                 ┌───────────┐
-                 │   NGINX   │
-                 │ SSL / TLS │
-                 └─────┬─────┘
+                ┌─────────────┐
+                │    NGINX    │
+                │  SSL / TLS  │
+                └──────┬──────┘
                        │
               ┌────────┴────────┐
+              │                 │
               ▼                 ▼
-        React Frontend     Express API
-                              │
-                 ┌────────────┼─────────────┐
-                 ▼            ▼             ▼
-              Ollama       JSON Store    External APIs
+       React Frontend      Express API
+                                │
+                 ┌──────────────┼──────────────┐
+                 │              │              │
+                 ▼              ▼              ▼
+              Ollama         Storage      External APIs
 ```
 
 ---
 
-# 📈 Current Architecture Characteristics
+# 🗃️ Storage
 
-### ⚡ Local-first AI
+Atlas currently uses a lightweight persistent JSON store.
 
-LLM inference can run locally through Ollama instead of requiring every conversation to be sent to a hosted AI provider.
-
-### 🧠 Stateful
-
-Atlas maintains persistent memory, conversations, contacts, jobs and integration states.
-
-### 🔌 Extensible
-
-The tool registry makes it possible to add new capabilities without rewriting the entire agent.
-
-### 🌐 Connected
-
-Atlas can bridge a local AI model with real-world APIs.
-
-### 🧩 Modular
-
-Frontend, backend, TTS and infrastructure are separated into distinct areas.
-
----
-
-# 🗺️ Roadmap
-
-Atlas is an evolving project.
-
-## 🟢 Current
-
-* [x] Local LLM integration
-* [x] Agent memory
-* [x] Chat streaming
-* [x] Gmail
-* [x] Google Calendar
-* [x] LinkedIn
-* [x] Web search
-* [x] Scheduled tasks
-* [x] Background jobs
-* [x] PDF generation
-* [x] Excel generation
-* [x] Word generation
-* [x] OAuth infrastructure
-* [x] React frontend
-* [x] Docker/Nginx deployment infrastructure
-* [x] English/Telugu TTS assets
-
-## 🟡 In Progress
-
-* [ ] More agent tools
-* [ ] Improved task orchestration
-* [ ] Better long-term memory
-* [ ] More robust authentication
-* [ ] Expanded voice interaction
-* [ ] More integrations
-* [ ] Better autonomous planning
-* [ ] Improved observability
-
-## 🔵 Future
+The data layer maintains information such as:
 
 ```text
-🧠 Semantic memory
-🕸️ Knowledge graph
-🤖 Multi-agent workflows
-🎙️ Full voice conversation
-📱 Mobile client
-🖥️ Desktop client
-🔐 Fine-grained permissions
-📊 Advanced analytics
-🧪 Agent evaluation framework
-🧰 Plugin / skill system
-🔄 More autonomous workflows
+Memories
+Messages
+Tasks
+Jobs
+Contacts
+Integrations
+Logs
+Usage
 ```
+
+This approach keeps the project simple for personal and low-volume deployments.
+
+For larger production environments, the architecture can eventually move toward:
+
+```text
+JSON
+  ↓
+SQLite
+  ↓
+PostgreSQL
+  ↓
+Vector Database
+  ↓
+Semantic Memory
+```
+
+---
+
+# 🎨 Interface
+
+Atlas uses a React-based frontend with Vite.
+
+The interface is designed around:
+
+```text
+Chat
+Integrations
+Agent Actions
+Streaming Responses
+```
+
+Add your actual screenshots here:
+
+```markdown
+## Screenshots
+
+### Atlas Chat
+
+<p align="center">
+  <img src="./docs/screenshots/atlas-chat.png" width="90%">
+</p>
+
+### Integrations
+
+<p align="center">
+  <img src="./docs/screenshots/integrations.png" width="90%">
+</p>
+```
+
+---
+
+# 🤖 AI-Assisted Development
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Approximately-90%25%20Claude%20Assisted-8B5CF6?style=for-the-badge&logo=anthropic&logoColor=white">
+</p>
+
+A significant portion of Atlas was developed with **Anthropic Claude** as an AI engineering collaborator.
+
+Claude was extensively used during the development process for:
+
+* Backend implementation
+* Frontend implementation
+* Agent logic
+* API integration
+* Refactoring
+* Debugging
+* Deployment work
+* Documentation
+* Problem solving
+* Feature exploration
+
+The project author remained responsible for:
+
+* Product direction
+* Architecture decisions
+* Requirements
+* Technology choices
+* Integration configuration
+* Testing
+* Deployment
+* Code review
+* Final decisions
+
+### Development model
+
+```text
+                   PRODUCT VISION
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │     HUMAN     │
+                 │ Direction + QA│
+                 └───────┬───────┘
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │    CLAUDE     │
+                 │ AI Engineering│
+                 │   Assistance  │
+                 └───────┬───────┘
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │     ATLAS     │
+                 │     AGENT     │
+                 └───────────────┘
+```
+
+> **Atlas is intentionally an AI-assisted software engineering project. The approximately 90% figure represents the project's development experience and is not presented as a machine-audited line-by-line authorship measurement.**
 
 ---
 
 # 🧪 Development Philosophy
 
-Atlas is not intended to be just another chatbot UI.
+Atlas explores a simple question:
 
-The project explores a larger question:
+> **What happens when a local AI model is given memory, tools, integrations and the ability to execute real-world tasks?**
 
-> **What happens when a local AI model is given persistent context, tools, integrations and the ability to execute real-world tasks?**
-
-The architecture therefore treats the LLM as one component inside a larger system:
+The architecture therefore focuses on:
 
 ```text
-             ┌────────────────────┐
-             │       USER         │
-             └─────────┬──────────┘
-                       │
-                       ▼
-             ┌────────────────────┐
-             │       ATLAS        │
-             │    Agent Layer     │
-             └─────────┬──────────┘
-                       │
-          ┌────────────┼────────────┐
-          │            │            │
-          ▼            ▼            ▼
-       Memory        Tools        Model
-          │            │            │
-          │      ┌─────┼─────┐      │
-          │      │     │     │      │
-          ▼      ▼     ▼     ▼      ▼
-       Context   Gmail Calendar Web Ollama
+LLM
+ +
+Memory
+ +
+Tools
+ +
+Context
+ +
+Execution
+ =
+Agent
 ```
+
+The language model is only one part of the system.
+
+The surrounding infrastructure is what allows the model to become an actual assistant.
 
 ---
 
-# 🔍 Design Principles
+# 🗺️ Roadmap
 
-### 1. 🧠 Context before action
+## Current
 
-The assistant should understand the user's request and available context before executing an operation.
+* [x] Local LLM integration
+* [x] Persistent memory
+* [x] Conversation history
+* [x] Gmail integration
+* [x] Google Calendar integration
+* [x] Web search
+* [x] LinkedIn integration
+* [x] OAuth infrastructure
+* [x] Streaming responses
+* [x] Background tasks
+* [x] Scheduled tasks
+* [x] PDF generation
+* [x] Excel generation
+* [x] Word generation
+* [x] React frontend
+* [x] Docker deployment infrastructure
+* [x] Nginx deployment infrastructure
+* [x] English and Telugu TTS assets
 
-### 2. 🔐 Side effects deserve attention
+## Planned
 
-Reading information and changing the outside world are different operations.
+* [ ] Semantic memory
+* [ ] Vector database
+* [ ] Improved agent planning
+* [ ] More integrations
+* [ ] Better voice interaction
+* [ ] Advanced authentication
+* [ ] Agent observability
+* [ ] Agent evaluation framework
+* [ ] Plugin / skill system
+* [ ] Mobile application
+* [ ] Desktop application
+* [ ] Multi-agent workflows
 
-### 3. ⚡ Fast responses matter
+---
 
-Streaming allows the interface to feel responsive while the model is still generating.
+# 🔒 Security
 
-### 4. 🏠 Local inference matters
+Atlas interacts with services that may contain sensitive information.
 
-Ollama allows Atlas to operate around locally hosted models.
+Before deploying publicly:
 
-### 5. 🧩 Tools should be replaceable
+* Use HTTPS
+* Protect OAuth credentials
+* Never expose access tokens
+* Secure persistent storage
+* Avoid logging sensitive information
+* Use least-privilege OAuth scopes
+* Add authentication before exposing APIs publicly
+* Review all external write operations
 
-Individual capabilities should be independent enough to evolve without replacing the entire agent.
-
-### 6. 📦 Keep infrastructure practical
-
-The project aims to remain deployable on relatively modest infrastructure rather than assuming a massive GPU cluster.
+> Atlas is an evolving personal-agent project and should be properly hardened before being used as a public production service.
 
 ---
 
@@ -1357,199 +1267,75 @@ The project aims to remain deployable on relatively modest infrastructure rather
 
 Contributions are welcome.
 
-A useful contribution could be:
+You can contribute through:
 
 ```text
-🐛 Bug fix
-✨ New tool
-🔌 New integration
-🧠 Memory improvement
-🎨 UI improvement
-⚡ Performance optimization
-🔐 Security improvement
-📚 Documentation
-🧪 Tests
+Bug fixes
+New integrations
+New agent tools
+UI improvements
+Performance improvements
+Security improvements
+Documentation
+Testing
 ```
 
-## Development flow
+Create a branch:
 
 ```bash
 git checkout -b feature/my-feature
+```
 
-# make your changes
+Commit your changes:
 
+```bash
 git add .
 
 git commit -m "feat: add my feature"
+```
 
+Push:
+
+```bash
 git push origin feature/my-feature
 ```
 
-Then open a pull request.
+Then open a Pull Request.
 
 ---
 
-# 🔒 Security
+# ⭐ Support Atlas
 
-Atlas interacts with services that may contain highly sensitive personal information.
+If you find the project interesting:
 
-Before deploying:
-
-* 🔑 Never commit OAuth secrets
-* 🔑 Never expose access tokens
-* 🔐 Use HTTPS in production
-* 🛡️ Restrict backend access
-* 🧹 Avoid logging sensitive content
-* 📁 Protect persistent storage
-* 👤 Use least-privilege OAuth scopes where possible
-* 🧪 Test integrations in a development account first
-
-**Do not run an internet-facing instance with development credentials or unrestricted access.**
-
----
-
-# ⚠️ Current Limitations
-
-Atlas is an actively developed project and should not be treated as a finished enterprise platform.
-
-Current architectural limitations include:
-
-* JSON-based persistence is better suited to a single-user / low-volume environment.
-* Some integrations depend on provider OAuth configuration.
-* Local model quality depends heavily on the selected Ollama model and available hardware.
-* Web search currently relies on HTML extraction from DuckDuckGo.
-* Some capabilities are implemented more deeply than others.
-* Autonomous actions should be used carefully.
-* Production deployments require proper authentication, HTTPS and infrastructure hardening.
-
-The current storage implementation itself describes the JSON approach as appropriate for a single user / low-volume scenario, with SQLite/PostgreSQL suggested as a future upgrade path.
-
----
-
-# 📊 Project at a Glance
-
-```text
-╔══════════════════════════════════════════════════════╗
-║                    ATLAS AGENT                      ║
-╠══════════════════════════════════════════════════════╣
-║                                                      ║
-║   🧠 Local AI          💾 Persistent Memory          ║
-║                                                      ║
-║   📧 Gmail             📅 Calendar                  ║
-║                                                      ║
-║   🌐 Web Search        💼 LinkedIn                  ║
-║                                                      ║
-║   ⚙️ Background Jobs   ⏰ Scheduling                 ║
-║                                                      ║
-║   📕 PDF               📊 Excel                     ║
-║                                                      ║
-║   📝 Word              🎙️ TTS                       ║
-║                                                      ║
-║   🔐 OAuth             🐳 Deployment                 ║
-║                                                      ║
-╚══════════════════════════════════════════════════════╝
-```
-
----
-
-# 🧑‍💻 Author
-
-**Varshith**
-
-Atlas Agent is an independent project exploring practical, tool-enabled personal AI.
-
-The project combines:
-
-```text
-Human product direction
-        +
-AI-assisted software development
-        +
-Local LLM inference
-        +
-Real-world APIs
-        +
-Agentic workflows
-        =
-Atlas Agent
-```
-
----
-
-# 🤖 AI-Assisted Development
-
-### Approximately 90% Claude-assisted
-
-A significant portion of Atlas was developed using **Anthropic Claude as an AI coding partner**.
-
-Claude was used extensively for:
-
-* 🧱 Initial implementation
-* 🧩 Component development
-* 🔧 Backend development
-* 🐛 Debugging
-* ♻️ Refactoring
-* 🧪 Problem solving
-* 📚 Documentation
-* ⚙️ Deployment scripting
-* 🔌 Integration work
-
-Human involvement remained central to:
-
-* Product vision
-* Architecture direction
-* Feature requirements
-* Integration decisions
-* Testing
-* Deployment
-* Review
-* Iteration
-* Final acceptance
-
-> **Atlas is therefore also an experiment in AI-assisted software engineering — exploring how far a developer can push a complex software project by treating an AI model as an active engineering collaborator.**
-
----
-
-# ⭐ Support the Project
-
-If you find Atlas interesting:
-
-```text
-⭐ Star the repository
-🐛 Open an issue
-💡 Suggest a feature
-🔧 Submit a PR
-📢 Share the project
-```
-
-Every contribution helps Atlas become more capable.
+* ⭐ Star the repository
+* 🐛 Report bugs
+* 💡 Suggest features
+* 🔧 Submit pull requests
+* 📢 Share Atlas with other developers
 
 ---
 
 # 📜 License
 
-This project is distributed under the license included in the repository.
+Atlas Agent is released under the **Apache License 2.0**.
 
-See:
-
-```text
-LICENSE
-```
+See the [`LICENSE`](./LICENSE) file for details.
 
 ---
 
 <p align="center">
+  <img src="https://img.shields.io/badge/BUILT%20WITH-AI%20%2B%20ENGINEERING-7C3AED?style=for-the-badge">
+</p>
 
-### 🧭 Atlas Agent
+<p align="center">
+  <strong>Atlas Agent</strong>
+  <br>
+  <em>A personal AI that doesn't just talk. It acts.</em>
+</p>
 
-<strong>Remember more. Connect more. Do more.</strong>
-
-<br/>
-
-<em>Built with humans, AI, code, and a lot of experimentation.</em>
-
-<br/><br/>
-
-🧠 • 🔌 • ⚡ • 🛠️ • 🚀
-
+<p align="center">
+  <a href="https://github.com/varshith-dev/Atlas-Agent">
+    GitHub Repository
+  </a>
 </p>
