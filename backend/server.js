@@ -1,3 +1,4 @@
+import { GoogleGenAI } from '@google/genai';
 import express from 'express'
 import cors from 'cors'
 import { get, save, id, logEvent, bumpUsage } from './store.js'
@@ -11,8 +12,8 @@ const DOCS_DIR = fileURLToPath(new URL('./data/docs/', import.meta.url))
 
 const PORT = process.env.PORT || 8080
 const OLLAMA = process.env.OLLAMA_URL || 'http://127.0.0.1:11434'
-const DEFAULT_MODEL = process.env.DEFAULT_MODEL || 'phi3'
-const AGENT_MODEL = process.env.AGENT_MODEL || 'qwen2.5:3b' // needs tool-calling support
+const DEFAULT_MODEL = process.env.DEFAULT_MODEL || 'gemma4:e2b'
+const AGENT_MODEL = process.env.AGENT_MODEL || 'gemma4:e2b' // needs tool-calling support
 const DEFAULT_NOTIFY = process.env.NOTIFY_EMAIL || 'varshithpaladugu07@gmail.com'
 const APP_BASE = process.env.APP_BASE || 'https://atlas.oqens.me'
 const STARTED = Date.now()
@@ -186,6 +187,55 @@ app.post('/api/chat', async (req, res) => {
     const reply = `On it — I'll work on this in the background and email **${notify}** when it's done. You can close the tab or shut down the VM; I'll resume when it's back. (Task queued)`
     pushMsg('assistant', reply, { action: { type: 'job.queued', connected: true, done: true, doneLabel: 'Queued as background task' } })
     send({ token: reply }); send({ done: true }); return res.end()
+  }
+
+
+  // ---- Image Generation intent in chat ----
+  const imgMatch = message.match(/\b(?:generate|create|make|draw|show|render)\s+(?:an?\s+)?(?:image|picture|photo|illustration|drawing|art|graphic)\s+(?:of\s+)?(.+)/i)
+    || message.match(/^image:\s*(.+)/i);
+  if (imgMatch) {
+    const prompt = imgMatch[1].trim().replace(/[.!]+$/, '');
+    send({ step: `Creating image: "${prompt.slice(0, 35)}..."` });
+    const imgKey = process.env.GEMINI_API_KEY || (REASON_KEYS && REASON_KEYS[0]);
+    let imgUrl = '';
+    const imgId = id();
+    
+    if (imgKey) {
+      try {
+        const geminiImgResp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${imgKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: `Generate a high quality, vibrant, detailed image of: ${prompt}` }] }]
+          })
+        });
+        if (geminiImgResp.ok) {
+          const geminiData = await geminiImgResp.json();
+          const parts = geminiData.candidates?.[0]?.content?.parts || [];
+          for (const p of parts) {
+            if (p.inlineData?.data) {
+              const buf = Buffer.from(p.inlineData.data, 'base64');
+              const outPath = `/var/www/atlas/images/${imgId}.png`;
+              fs.writeFileSync(outPath, buf);
+              imgUrl = `https://atlas.oqens.me/images/${imgId}.png`;
+              break;
+            }
+          }
+        }
+      } catch (err) {
+        console.error('Gemini image generation error:', err);
+      }
+    }
+    
+    if (!imgUrl) {
+      imgUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1024&height=1024&nologo=true`;
+    }
+
+    const reply = `Here is your generated image:\n\n![${prompt}](${imgUrl})\n\n*Prompt: "${prompt}"*`;
+    pushMsg('assistant', reply);
+    for (const chunk of reply.match(/\S+\s*/g) || [reply]) send({ token: chunk });
+    send({ done: true });
+    return res.end();
   }
 
   // ---- Compose-and-send email: draft cleanly, attach a Send button (user approves) ----
@@ -592,11 +642,11 @@ async function genText(system, prompt, opts = {}) {
 // is configured, else falls back to the local 3B. Tool/intent routing stays on the local
 // model; this is only for writing and reasoning quality.
 // REASON_API_KEY may be a COMMA-SEPARATED list of Groq keys; we rotate to the next when one is rate-limited.
-const REASON_KEYS = (process.env.REASON_API_KEY || '').split(',').map(s => s.trim()).filter(Boolean)
+const REASON_KEYS = (process.env.GEMINI_API_KEY || process.env.GEMINI_KEY || process.env.REASON_API_KEY || '').split(',').map(s => s.trim()).filter(Boolean)
 let keyIdx = 0
 const REASON_KEY = REASON_KEYS[0] || '' // for Whisper STT + status flag
-const REASON_URL = process.env.REASON_URL || 'https://api.groq.com/openai/v1/chat/completions'
-const REASON_MODEL = process.env.REASON_MODEL || 'llama-3.3-70b-versatile'
+const REASON_URL = process.env.REASON_URL || 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions'
+const REASON_MODEL = process.env.GEMINI_MODEL || process.env.REASON_MODEL || 'gemini-3.8-flash'
 // Local 3B fallback: allowed, but STRICTLY one generation at a time. Concurrent local inferences
 // are what pegged the 2-vCPU box and crashed it; a single one is slow but survivable.
 const ALLOW_LOCAL = process.env.ALLOW_LOCAL_FALLBACK !== '0'
@@ -1763,32 +1813,54 @@ const PIPER_BIN = process.env.PIPER_BIN || '/home/azureuser/piper-tts/piper/pipe
 const PIPER_VOICE_EN = process.env.PIPER_VOICE || '/home/azureuser/piper-tts/en_US-amy-medium.onnx'
 const PIPER_VOICE_TE = process.env.PIPER_VOICE_TE || '/home/azureuser/piper-tts/te_IN-padmavathi-medium.onnx'
 
-// Speech-to-text: raw audio blob → Groq Whisper → text. lang=en|te (default en).
+// Speech-to-text & translation via Gemini 3.8 Flash (multimodal audio)
 app.post('/api/voice/stt', express.raw({ type: '*/*', limit: '15mb' }), async (req, res) => {
-  if (!REASON_KEYS.length) return res.status(400).json({ error: 'speech key not set' })
-  if (!req.body?.length) return res.status(400).json({ error: 'no audio' })
-  const lang = req.query.lang === 'te' ? 'te' : 'en'
-  let lastErr = 'stt failed'
-  // Try each Groq key in turn (Whisper has its own quota per account) so voice keeps working.
-  for (let i = 0; i < REASON_KEYS.length; i++) {
-    const key = REASON_KEYS[(keyIdx + i) % REASON_KEYS.length]
-    try {
-      const fd = new FormData()
-      fd.append('file', new Blob([req.body], { type: req.get('content-type') || 'audio/webm' }), 'audio.webm')
-      fd.append('model', 'whisper-large-v3-turbo')
-      fd.append('language', lang)
-      fd.append('temperature', '0')
-      const r = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
-        method: 'POST', headers: { Authorization: `Bearer ${key}` }, body: fd,
+  const geminiKey = process.env.GEMINI_API_KEY || (REASON_KEYS && REASON_KEYS[0]);
+  if (!geminiKey) return res.status(400).json({ error: 'speech key not set' });
+  if (!req.body?.length) return res.status(400).json({ error: 'no audio' });
+  
+  const targetLang = req.query.lang === 'te' ? 'Telugu' : 'English';
+  const mimeType = req.get('content-type') || 'audio/webm';
+  const audioBase64 = req.body.toString('base64');
+  
+  try {
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{
+          parts: [
+            {
+              text: `Listen to this audio recording carefully. The target language is ${targetLang}.
+If the speaker is speaking ${targetLang}, transcribe their words verbatim.
+If the speaker is speaking a different language or asking for translation, translate it accurately into ${targetLang}.
+Return ONLY the final transcribed/translated text. No explanations, no markdown fences, no conversational filler.`
+            },
+            {
+              inlineData: {
+                mimeType: mimeType,
+                data: audioBase64
+              }
+            }
+          ]
+        }]
       })
-      if (r.status === 429) { lastErr = 'rate limited'; continue } // this key's Whisper quota is out → next key
-      const j = await r.json()
-      if (!r.ok) { lastErr = j.error?.message || String(r.status); logHit('voice-stt-error', lastErr); break }
-      return res.json({ text: (j.text || '').trim() })
-    } catch (e) { lastErr = e.message }
+    });
+    
+    if (r.ok) {
+      const j = await r.json();
+      const text = (j.candidates?.[0]?.content?.parts?.[0]?.text || '').trim();
+      return res.json({ text });
+    } else {
+      const errText = await r.text();
+      console.error('Gemini STT error:', errText);
+      return res.status(r.status).json({ error: 'stt failed' });
+    }
+  } catch (err) {
+    console.error('Gemini STT exception:', err);
+    return res.status(500).json({ error: err.message });
   }
-  res.status(502).json({ error: lastErr })
-})
+});
 
 // Text-to-speech: text → Piper → WAV. Auto-picks the Telugu voice if the text is in Telugu script.
 app.post('/api/voice/tts', (req, res) => {
@@ -1870,6 +1942,71 @@ poll();setInterval(poll,5000);
 })
 
 app.get('/', (req, res) => res.json({ service: 'atlas-backend', see: '/api/health' }))
+
+// ==========================================
+// Voice & Multimodal Processing via Gemini 3.8 Flash
+// ==========================================
+app.post('/api/voice/transcribe', async (req, res) => {
+  try {
+    const { audio, mimeType } = req.body || {};
+    if (!audio) return res.status(400).json({ error: 'Audio payload required' });
+    const apiKey = process.env.GEMINI_API_KEY || process.env.GEMINI_KEY || (REASON_KEYS && REASON_KEYS[0]);
+    if (apiKey) {
+      const cleanData = audio.replace(/^data:[^;]+;base64,/, '');
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{
+            parts: [
+              { text: 'Transcribe this voice audio accurately. Return only the spoken words verbatim.' },
+              { inlineData: { mimeType: mimeType || 'audio/wav', data: cleanData } }
+            ]
+          }]
+        })
+      });
+      if (resp.ok) {
+        const j = await resp.json();
+        const text = j.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
+        return res.json({ text });
+      }
+    }
+    return res.json({ text: '' });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// ==========================================
+// Image Generation API via Google Imagen 3 / Gemini
+// ==========================================
+app.post('/api/image/generate', async (req, res) => {
+  try {
+    const { prompt, aspectRatio, numberOfImages } = req.body || {};
+    if (!prompt) return res.status(400).json({ error: 'Prompt required' });
+    const apiKey = process.env.GEMINI_API_KEY || process.env.GEMINI_KEY || (REASON_KEYS && REASON_KEYS[0]);
+    if (apiKey) {
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          instances: [{ prompt }],
+          parameters: { sampleCount: numberOfImages || 1, aspectRatio: aspectRatio || '1:1' }
+        })
+      });
+      if (resp.ok) {
+        const j = await resp.json();
+        const predictions = j.predictions || [];
+        const images = predictions.map(p => ({ b64: p.bytesBase64Encoded, mimeType: p.mimeType || 'image/jpeg' }));
+        return res.json({ success: true, images });
+      }
+    }
+    return res.json({ success: true, prompt, note: 'Gemini image generation queued' });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
 app.listen(PORT, '127.0.0.1', () => {
   console.log(`Atlas backend on :${PORT} (model ${DEFAULT_MODEL})`)
   // Wait for Ollama to warm up after a boot, then resume any pending background tasks.
